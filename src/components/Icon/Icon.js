@@ -1,11 +1,37 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import mods from '../../utility/mods'
+import './Icon.scss'
 
-const Icon = ({ className = '', name, size, ariaHidden = true }) => (
+const Icon = ({
+  className = '',
+  name,
+  size,
+  ariaHidden = true,
+  style = {},
+  primary,
+  secondary,
+  dark,
+  gray,
+  white,
+  ...props
+}) => (
   <i
-    className={`cg-icon cg-icon--${name} ${className}`}
-    style={{ fontSize: size }}
+    className={mods(
+      'cg-icon',
+      {
+        primary,
+        secondary,
+        dark,
+        gray,
+        white,
+      },
+      `cg-icon--${name}`,
+      className,
+    )}
+    style={{ fontSize: `${size}px`, ...style }}
     aria-hidden={ariaHidden}
+    {...props}
   />
 )
 

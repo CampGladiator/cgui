@@ -1,9 +1,30 @@
 import React from 'react'
 import mods from '../../utility/mods'
+import './Loader.scss'
 
-const Loader = ({ label = 'loading', white }) => (
+const Loader = ({
+  label = 'loading',
+  white,
+  gray,
+  dark,
+  secondary,
+  primary,
+  disabled,
+  className = '',
+}) => (
   <figure
-    className={mods('cg-loader', { white })}
+    className={mods(
+      'cg-loader',
+      {
+        white,
+        gray,
+        dark,
+        secondary,
+        primary,
+        disabled,
+      },
+      className,
+    )}
     role="alert"
     aria-live="assertive"
     aria-label={label}

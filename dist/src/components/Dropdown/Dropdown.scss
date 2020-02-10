@@ -3,7 +3,7 @@
 
 $input-border: 2px solid $light-gray;
 
-.input {
+.cg-input {
   font-family: $font-primary;
   background-color: white;
   border: 0;
@@ -23,6 +23,8 @@ $input-border: 2px solid $light-gray;
   transition: border-color ease 0.2s;
   outline: 0;
   width: 100%;
+  padding: 0;
+  margin: 0;
 
   &::-webkit-inner-spin-button,
   &::-webkit-calendar-picker-indicator {

@@ -1,26 +1,30 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import Dropdown from './components/Dropdown'
+import Button from './components/Button'
+// import './cgui.scss'
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Form</h1>
+      <form>
+        <Dropdown
+          label="inline"
+          inline
+          options={[{ label: 'test', value: 'test' }]}
+        />
+        <Dropdown label="block" options={[{ label: 'test', value: 'test' }]} />
+      </form>
+
+      <Button solid size="small">
+        Small Primary
+      </Button>
+
+      <Button solid icon="check" size="large">
+        With Icon
+      </Button>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App

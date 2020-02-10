@@ -1,0 +1,62 @@
+.label {
+  display: inline-block;
+  font-family: $font-primary;
+  font-weight: 400;
+  font-size: 14px;
+  letter-spacing: 1.53px;
+  color: $medium-gray;
+  text-align: left;
+  text-transform: uppercase;
+  line-height: 1.2;
+  padding: 10px 10px 10px 0;
+}
+
+.image-label {
+  position: absolute;
+  z-index: 1;
+  height: 35px;
+  line-height: 35px;
+  padding: 0 15px;
+  background: $medium-gray;
+  font-family: $font-display;
+  font-size: 24px;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 0.025em;
+  white-space: nowrap;
+
+  &--tr {
+    top: 0;
+    right: 0;
+  }
+
+  &--tl {
+    top: 0;
+    left: 0;
+  }
+
+  &--bl {
+    top: unset;
+    bottom: 0;
+    left: 0;
+  }
+
+  &--br {
+    bottom: 0;
+    right: 0;
+  }
+
+  &--small {
+    height: 25px;
+    line-height: 25px;
+    font-size: 18px;
+  }
+
+  &--gladiator {
+    background-color: $gladiator;
+  }
+
+  &--navy {
+    background-color: $navy;
+  }
+}

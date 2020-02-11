@@ -45,13 +45,14 @@ function App() {
       <Icon name="arrow-left" size={20} dark />
       <Icon name="arrow-left" size={20} gray />
       <Icon name="arrow-left" size={20} white />
+      <Icon name="arrow-left" size={20} disabled />
 
       <Loader />
       <Loader secondary />
       <Loader disabled />
       <Loader gray />
       <Loader dark />
-      <Loader white/>
+      <Loader white />
     </div>
   )
 }

@@ -153,6 +153,10 @@ $gladicons: 'gladicons' !important;
     color: white;
   }
 
+  &--disabled {
+    color: $medium-gray;
+  }
+
   &--alert::before {
     content: $icon-alert;
   }

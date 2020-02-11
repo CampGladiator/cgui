@@ -14,7 +14,7 @@ const Icon = ({
   dark,
   gray,
   white,
-  ...props
+  disabled,
 }) => (
   <i
     className={mods(
@@ -25,20 +25,28 @@ const Icon = ({
         dark,
         gray,
         white,
+        disabled,
       },
       `cg-icon--${name}`,
       className,
     )}
     style={{ fontSize: `${size}px`, ...style }}
     aria-hidden={ariaHidden}
-    {...props}
   />
 )
 
 Icon.propTypes = {
+  className: PropTypes.string,
   name: PropTypes.string.isRequired,
   size: PropTypes.number,
   ariaHidden: PropTypes.bool,
+  style: PropTypes.object,
+  primary: PropTypes.bool,
+  secondary: PropTypes.bool,
+  dark: PropTypes.bool,
+  gray: PropTypes.bool,
+  white: PropTypes.bool,
+  disabled: PropTypes.bool,
 }
 
 export default Icon

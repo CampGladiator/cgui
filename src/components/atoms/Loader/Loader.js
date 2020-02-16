@@ -1,5 +1,5 @@
 import React from 'react'
-import mods from '../../utility/mods'
+import mods from '../../../utilities/mods'
 import './Loader.scss'
 
 const Loader = ({

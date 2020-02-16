@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import mods from '../../utility/mods'
+import mods from '../../../utilities/mods'
 import './Icon.scss'
 
 const Icon = ({

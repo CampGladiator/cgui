@@ -1,8 +1,8 @@
 import React from 'react'
-import Dropdown from './components/Dropdown'
-import Button from './components/Button'
-import Icon from './components/Icon'
-import Loader from './components/Loader'
+import Dropdown from './components/atoms/Dropdown'
+import Button from './components/atoms/Button'
+import Icon from './components/atoms/Icon'
+import Loader from './components/atoms/Loader'
 
 function App() {
   return (

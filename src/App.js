@@ -20,6 +20,9 @@ function App() {
       <Button solid size="small">
         Small Primary
       </Button>
+      <Button disabled>
+        Disabled
+      </Button>
 
       <Button secondary solid icon="check" size="large">
         With Icon

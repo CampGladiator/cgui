@@ -21,11 +21,15 @@ describe('<Button />', () => {
   })
 
   it('should add `disabled` attribute to the element', () => {
-    expect(shallow(<Button disabled />).find('.cg-button[disabled]')).toBeTruthy()
+    expect(
+      shallow(<Button disabled />).find('.cg-button[disabled]'),
+    ).toBeTruthy()
   })
 
   it('should add size as a modifier class', () => {
-    expect(shallow(<Button size="xsmall" />).hasClass('cg-button--xsmall')).toBe(true)
+    expect(
+      shallow(<Button size="xsmall" />).hasClass('cg-button--xsmall'),
+    ).toBe(true)
   })
 
   it('should add size class for the given breakpoint', () => {
@@ -41,9 +45,9 @@ describe('<Button />', () => {
   })
 
   it('renders a white loader the button is solid and loading', () => {
-    expect(
-      shallow(<Button solid loading />).contains(<Loader white />),
-    ).toBe(true)
+    expect(shallow(<Button solid loading />).contains(<Loader white />)).toBe(
+      true,
+    )
   })
 
   it('calls `onClick` handler', () => {

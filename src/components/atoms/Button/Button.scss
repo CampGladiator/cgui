@@ -1,4 +1,4 @@
-@import '../../../assets/styles/fonts.scss';
+@import '../../../assets/styles/fonts';
 @import '../../../assets/styles/variables';
 @import '../../../assets/styles/breakpoints';
 
@@ -72,7 +72,7 @@ $white-tint: rgba(255, 255, 255, 0.4);
 
   &--gray {
     --base-color: #{$dark-gray};
-    border-color: #{$medium-gray};
+    border-color: #{$dark-gray};
   }
 
   &--dark {

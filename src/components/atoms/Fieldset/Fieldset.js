@@ -1,30 +1,17 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import mods from '../../../utilities/mods'
 import './Fieldset.scss'
 
-const Fieldset = ({ inline = false, label, children, ...props }) => {
-  const classes = inline ? 'cg-fieldset cg-fieldset--inline' : 'cg-fieldset'
-
-  const renderInnerHtml = (label, children) =>
-    label ? (
-      <>
-        <label className="cg-label">{label}</label>
-        {children}
-      </>
-    ) : (
-      children
-    )
-
-  return (
-    <div className={classes} {...props}>
-      {renderInnerHtml(label, children)}
-    </div>
-  )
-}
+const Fieldset = ({ inline = false, children, className, ...props }) => (
+  <div className={mods('cg-fieldset', { inline }, className)} {...props}>
+    {children}
+  </div>
+)
 
 Fieldset.propTypes = {
-  label: PropTypes.string,
   inline: PropTypes.bool,
+  className: PropTypes.string,
   children: PropTypes.node,
 }
 

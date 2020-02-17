@@ -4,7 +4,7 @@ import mods from '../../../utilities/mods'
 import './Icon.scss'
 
 const Icon = ({
-  className = '',
+  className,
   name,
   size,
   ariaHidden = true,

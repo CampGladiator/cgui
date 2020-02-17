@@ -10,7 +10,7 @@ const Loader = ({
   secondary,
   primary,
   disabled,
-  className = '',
+  className,
 }) => (
   <figure
     className={mods(

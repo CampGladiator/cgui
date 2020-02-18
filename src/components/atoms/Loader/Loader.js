@@ -11,6 +11,7 @@ const Loader = ({
   primary,
   disabled,
   className,
+  ...props
 }) => (
   <figure
     className={mods(
@@ -28,6 +29,7 @@ const Loader = ({
     role="alert"
     aria-live="assertive"
     aria-label={label}
+    {...props}
   >
     <div className="cg-loader__dot" key={1} />
     <div className="cg-loader__dot" key={2} />

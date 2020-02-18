@@ -8,12 +8,21 @@ import Input from './components/atoms/Input'
 import Fieldset from './components/atoms/Fieldset'
 import FormLabel from './components/atoms/FormLabel'
 import Growl from './components/atoms/Growl'
+import ButtonGroup from './components/molecules/ButtonGroup'
 
 const toggleGrowl = () =>
   document.getElementById('growlInfo') &&
   document.getElementById('growlInfo').classList.toggle('cg-growl-msg--open')
 
 function App() {
+  const testLeftClick = () => {
+    console.log('left click')
+  }
+
+  const testRightClick = () => {
+    console.log('right click')
+  }
+
   return (
     <div className="App">
       <Card style={{ padding: '20px' }}>
@@ -45,25 +54,37 @@ function App() {
       </Card>
 
       <Card style={{ padding: '20px' }}>
-        <Button outline size="xsmall">
+        <Button outline size="xsmall" style={{ margin: '10px' }}>
           Extra Small Outline
         </Button>
-        <Button solid size="small">
+        <Button solid size="small" style={{ margin: '10px' }}>
           Small Primary
         </Button>
-        <Button solid disabled>
+        <Button solid disabled style={{ margin: '10px' }}>
           Disabled
         </Button>
-        <Button secondary solid icon="check" size="large">
+        <Button
+          secondary
+          solid
+          icon="check"
+          size="large"
+          style={{ margin: '10px' }}
+        >
           With Icon
         </Button>
-        <Button outline icon="check" size="large">
+        <Button outline icon="check" size="large" style={{ margin: '10px' }}>
           With Icon
         </Button>
-        <Button gray solid size="xlarge">
+        <Button gray solid size="xlarge" style={{ margin: '10px' }}>
           With Icon
         </Button>
-        <Button dark solid icon="check" size="xlarge">
+        <Button
+          dark
+          solid
+          icon="check"
+          size="xlarge"
+          style={{ margin: '10px' }}
+        >
           With Icon
         </Button>
       </Card>
@@ -77,11 +98,11 @@ function App() {
       </Card>
 
       <Card style={{ padding: '20px' }}>
-        <Loader />
-        <Loader secondary />
-        <Loader disabled />
-        <Loader gray />
-        <Loader dark />
+        <Loader style={{ margin: '20px' }} />
+        <Loader style={{ margin: '20px' }} secondary />
+        <Loader style={{ margin: '20px' }} disabled />
+        <Loader style={{ margin: '20px' }} gray />
+        <Loader style={{ margin: '20px' }} dark />
       </Card>
 
       <Card style={{ padding: '20px' }}>
@@ -91,6 +112,25 @@ function App() {
         <Growl id="growlInfo" onClick={toggleGrowl}>
           This is a growl message.
         </Growl>
+      </Card>
+
+      <Card style={{ padding: '20px' }}>
+        <ButtonGroup
+          primary
+          content={{ left: 'default left', right: 'default right' }}
+          defaultSelected="left"
+          handleOnLeftClick={testLeftClick}
+          style={{ padding: '10px 0' }}
+        />
+        <ButtonGroup
+          secondary
+          size="large"
+          content={{ left: 'large left', right: 'large right' }}
+          defaultSelected="right"
+          handleOnLeftClick={testLeftClick}
+          handleOnRightClick={testRightClick}
+          style={{ padding: '10px 0' }}
+        />
       </Card>
     </div>
   )

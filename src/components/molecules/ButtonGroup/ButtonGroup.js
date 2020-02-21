@@ -17,7 +17,6 @@ const ButtonGroup = ({
   content = { left: '', right: '' },
   className = '',
   defaultSelected = '',
-  onClick,
   handleOnLeftClick = () => {},
   handleOnRightClick = () => {},
   ...props
@@ -71,7 +70,6 @@ const Size = PropTypes.oneOf(['xsmall', 'small', 'large', 'xlarge'])
 const Selected = PropTypes.oneOf(btnIDs)
 
 ButtonGroup.propTypes = {
-  className: PropTypes.string,
   primary: PropTypes.bool,
   secondary: PropTypes.bool,
   solid: PropTypes.bool,
@@ -79,10 +77,12 @@ ButtonGroup.propTypes = {
   dark: PropTypes.bool,
   gray: PropTypes.bool,
   size: Size,
-  defaultSelected: Selected,
   disabled: PropTypes.bool,
-  onClick: PropTypes.object,
-  children: PropTypes.node,
+  content: PropTypes.object.isRequired,
+  className: PropTypes.string,
+  defaultSelected: Selected,
+  handleOnLeftClick: PropTypes.func,
+  handleOnRightClick: PropTypes.func,
 }
 
 export default ButtonGroup

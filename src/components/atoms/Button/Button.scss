@@ -72,7 +72,6 @@ $white-tint: rgba(255, 255, 255, 0.4);
 
   &--gray {
     --base-color: #{$dark-gray};
-    border-color: #{$dark-gray};
   }
 
   &--dark {

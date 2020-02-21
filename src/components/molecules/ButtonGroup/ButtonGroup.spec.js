@@ -7,14 +7,14 @@ const content = { left: 'Test Left', right: 'Test Right' }
 
 describe('<ButtonGroup />', () => {
   it('renders without crashing', () => {
-    expect(() => shallow(<ButtonGroup />)).not.toThrow()
+    expect(() => shallow(<ButtonGroup content={content} />)).not.toThrow()
   })
 
   it('accepts any extra classes', () => {
     expect(
-      shallow(<ButtonGroup className="my-button-group" />).hasClass(
-        'my-button-group',
-      ),
+      shallow(
+        <ButtonGroup className="my-button-group" content={content} />,
+      ).hasClass('my-button-group'),
     ).toBe(true)
   })
 
@@ -30,7 +30,9 @@ describe('<ButtonGroup />', () => {
     const e = { target: { dataset: { id: 'left' } } }
     const handleLeftClick = sinon.spy()
 
-    shallow(<ButtonGroup handleOnLeftClick={handleLeftClick} />)
+    shallow(
+      <ButtonGroup handleOnLeftClick={handleLeftClick} content={content} />,
+    )
       .find('Button')
       .at(0)
       .simulate('click', e)
@@ -41,7 +43,9 @@ describe('<ButtonGroup />', () => {
     const e = { target: { dataset: { id: 'right' } } }
     const handleRightClick = sinon.spy()
 
-    shallow(<ButtonGroup handleOnRightClick={handleRightClick} />)
+    shallow(
+      <ButtonGroup handleOnRightClick={handleRightClick} content={content} />,
+    )
       .find('Button')
       .at(1)
       .simulate('click', e)

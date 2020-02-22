@@ -28,6 +28,7 @@ const Option = PropTypes.shape({
 })
 
 Dropdown.propTypes = {
+  className: PropTypes.string,
   options: PropTypes.arrayOf(Option),
   default_: Option,
 }

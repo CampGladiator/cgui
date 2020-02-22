@@ -8,6 +8,7 @@ import Input from './components/atoms/Input'
 import Fieldset from './components/atoms/Fieldset'
 import FormLabel from './components/atoms/FormLabel'
 import Growl from './components/atoms/Growl'
+import Checkbox from './components/atoms/Checkbox'
 import ButtonGroup from './components/molecules/ButtonGroup'
 
 const toggleGrowl = () =>
@@ -34,6 +35,7 @@ function App() {
             <Input rounded placeholder="Rounded Input"></Input>
           </Fieldset>
           <Fieldset inline>
+            <FormLabel>Inline Label</FormLabel>
             <Input placeholder="Default Input"></Input>
             <Input separator placeholder="Separator Input"></Input>
           </Fieldset>
@@ -131,6 +133,15 @@ function App() {
           handleOnRightClick={testRightClick}
           style={{ padding: '10px 0' }}
         />
+      </Card>
+
+      <Card style={{ padding: '20px' }}>
+        <Checkbox id="myCheckbox" checked style={{ marginBottom: '15px' }}>
+          This is a checked checkbox
+        </Checkbox>
+        <Checkbox id="myCheckbox2">
+          This is an unchecked checkbox <a href="#">with a link</a>
+        </Checkbox>
       </Card>
     </div>
   )

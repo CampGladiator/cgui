@@ -37,7 +37,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "campgladiator.cgui/components/atoms/button@0.0.3": {
+    "campgladiator.cgui/components/atoms/button@0.0.4": {
         "files": [
             {
                 "relativePath": "src/components/atoms/Button/Button.js",
@@ -93,7 +93,35 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "campgladiator.cgui/components/atoms/dropdown@0.0.2": {
+    "campgladiator.cgui/components/atoms/checkbox@0.0.3": {
+        "files": [
+            {
+                "relativePath": "src/components/atoms/Checkbox/Checkbox.js",
+                "test": false,
+                "name": "Checkbox.js"
+            },
+            {
+                "relativePath": "src/components/atoms/Checkbox/Checkbox.scss",
+                "test": false,
+                "name": "Checkbox.scss"
+            },
+            {
+                "relativePath": "src/components/atoms/Checkbox/Checkbox.spec.js",
+                "test": true,
+                "name": "Checkbox.spec.js"
+            },
+            {
+                "relativePath": "src/components/atoms/Checkbox/index.js",
+                "test": false,
+                "name": "index.js"
+            }
+        ],
+        "mainFile": "src/components/atoms/Checkbox/index.js",
+        "trackDir": "src/components/atoms/Checkbox",
+        "origin": "AUTHORED",
+        "exported": true
+    },
+    "campgladiator.cgui/components/atoms/dropdown@0.0.3": {
         "files": [
             {
                 "relativePath": "src/components/atoms/Dropdown/Dropdown.js",
@@ -177,7 +205,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "campgladiator.cgui/components/atoms/growl@0.0.2": {
+    "campgladiator.cgui/components/atoms/growl@0.0.3": {
         "files": [
             {
                 "relativePath": "src/components/atoms/Growl/Growl.js",
@@ -261,7 +289,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "campgladiator.cgui/components/atoms/loader@0.0.2": {
+    "campgladiator.cgui/components/atoms/loader@0.0.3": {
         "files": [
             {
                 "relativePath": "src/components/atoms/Loader/Loader.js",
@@ -289,7 +317,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "campgladiator.cgui/components/molecules/button-group@0.0.3": {
+    "campgladiator.cgui/components/molecules/button-group@0.0.5": {
         "files": [
             {
                 "relativePath": "src/components/molecules/ButtonGroup/ButtonGroup.js",

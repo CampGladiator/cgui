@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import mods from '../../../utilities/mods'
 import './Loader.scss'
 
@@ -36,5 +37,16 @@ const Loader = ({
     <div className="cg-loader__dot" key={3} />
   </figure>
 )
+
+Loader.propTypes = {
+  label: PropTypes.string,
+  white: PropTypes.bool,
+  gray: PropTypes.bool,
+  dark: PropTypes.bool,
+  secondary: PropTypes.bool,
+  primary: PropTypes.bool,
+  disabled: PropTypes.bool,
+  className: PropTypes.string,
+}
 
 export default Loader

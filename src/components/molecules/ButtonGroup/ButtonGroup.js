@@ -69,6 +69,11 @@ const ButtonGroup = ({
 const Size = PropTypes.oneOf(['xsmall', 'small', 'large', 'xlarge'])
 const Selected = PropTypes.oneOf(btnIDs)
 
+const Labels = PropTypes.shape({
+  left: PropTypes.string.isRequired,
+  right: PropTypes.string.isRequired,
+})
+
 ButtonGroup.propTypes = {
   primary: PropTypes.bool,
   secondary: PropTypes.bool,
@@ -78,7 +83,7 @@ ButtonGroup.propTypes = {
   gray: PropTypes.bool,
   size: Size,
   disabled: PropTypes.bool,
-  content: PropTypes.object.isRequired,
+  content: Labels,
   className: PropTypes.string,
   defaultSelected: Selected,
   handleOnLeftClick: PropTypes.func,

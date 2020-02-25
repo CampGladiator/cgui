@@ -8,7 +8,7 @@ const Checkbox = ({
   id,
   name = '',
   checked = false,
-  onClick,
+  onClick = () => {},
   children,
   ...props
 }) => {

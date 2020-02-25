@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Dropdown from './components/atoms/Dropdown'
 import Button from './components/atoms/Button'
 import Icon from './components/atoms/Icon'
@@ -9,49 +9,47 @@ import Fieldset from './components/atoms/Fieldset'
 import FormLabel from './components/atoms/FormLabel'
 import Growl from './components/atoms/Growl'
 import Checkbox from './components/atoms/Checkbox'
+import Switch from './components/atoms/Switch'
 import RadioGroup from './components/molecules/RadioGroup'
-
 import ButtonGroup from './components/molecules/ButtonGroup'
 
 const toggleGrowl = () =>
   document.getElementById('growlInfo') &&
   document.getElementById('growlInfo').classList.toggle('cg-growl-msg--open')
 
-const handleCheckboxClick = checked => {
-  console.log(checked)
-}
+const handleCheckboxClick = checked =>
+  console.log('handleCheckboxClick:', checked)
 
-const handleOnRadioChange = selected => {
-  console.log(selected)
-}
+const handleOnRadioChange = selected =>
+  console.log('handleOnRadioChange:', selected)
+
+const testLeftClick = () => console.log('testLeftClick:', 'left click')
+
+const testRightClick = () => console.log('testRightClick:', 'right click')
+
+const onButtonClick = e => console.log('onButtonClick:', e.target)
+
+const radioOptions = [
+  {
+    label: 'option 1',
+    value: 'id1',
+  },
+  {
+    label: 'option 2',
+    value: 'id2',
+  },
+  {
+    label: 'option 3',
+    value: 'id3',
+  },
+]
 
 function App() {
-  const testLeftClick = () => {
-    console.log('left click')
-  }
+  const [switch1Status, setSwitch1Status] = useState(false)
+  const [switch2Status, setSwitch2Status] = useState(false)
 
-  const testRightClick = () => {
-    console.log('right click')
-  }
-
-  const onButtonClick = e => {
-    console.log(e.target)
-  }
-
-  const radioOptions = [
-    {
-      label: 'option 1',
-      value: 'id1',
-    },
-    {
-      label: 'option 2',
-      value: 'id2',
-    },
-    {
-      label: 'option 3',
-      value: 'id3',
-    },
-  ]
+  const handleToggleSwitch1 = componentState => setSwitch1Status(componentState)
+  const handleToggleSwitch2 = componentState => setSwitch2Status(componentState)
 
   return (
     <div className="App">
@@ -179,7 +177,24 @@ function App() {
       </Card>
 
       <Card style={{ padding: '20px' }}>
-        <RadioGroup options={radioOptions} onChange={handleOnRadioChange}></RadioGroup>
+        <RadioGroup
+          options={radioOptions}
+          onChange={handleOnRadioChange}
+        ></RadioGroup>
+      </Card>
+
+      <Card style={{ padding: '20px' }}>
+        <Switch
+          defaultOn
+          onChange={handleToggleSwitch1}
+          style={{ marginBottom: '20px' }}
+        >
+          This switch is currently {`${switch1Status ? 'On' : ' Off'}`}
+        </Switch>
+
+        <Switch onChange={handleToggleSwitch2}>
+          This switch is currently {`${switch2Status ? 'On' : ' Off'}`}
+        </Switch>
       </Card>
     </div>
   )

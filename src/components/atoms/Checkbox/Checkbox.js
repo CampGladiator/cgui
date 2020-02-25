@@ -4,7 +4,7 @@ import './Checkbox.js'
 import './Checkbox.scss'
 
 const Checkbox = ({
-  className,
+  className = '',
   id,
   name = '',
   checked = false,

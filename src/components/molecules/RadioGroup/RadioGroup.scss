@@ -1,0 +1,50 @@
+@import '../../../assets/styles/variables.scss';
+@import '../../../assets/styles/fonts.scss';
+
+.cg-radio-list {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+
+  &--inline {
+    flex-direction: row;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    margin: 8px 0;
+    flex: 1;
+    cursor: pointer;
+    font-family: $font-primary;
+    font-weight: 300;
+    letter-spacing: .5px;
+    line-height: 1.2;
+    font-size: 14px;
+  }
+
+  &--inline &__item {
+    white-space: nowrap;
+  }
+
+  &__input {
+    cursor: pointer;
+    -webkit-appearance: none;
+    background-clip: content-box;
+    background-color: $light-gray;
+    border: 2px solid $light-gray;
+    border-radius: 50%;
+    box-sizing: border-box;
+    height: 27px;
+    padding: 2px;
+    transition: background-color ease 0.2s;
+    min-width: 27px;
+    margin: 0 20px 0 0;
+    outline: none;
+
+    &--checked,
+    &:checked {
+      background-color: $navy;
+    }
+  }
+}

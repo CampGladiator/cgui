@@ -9,11 +9,21 @@ import Fieldset from './components/atoms/Fieldset'
 import FormLabel from './components/atoms/FormLabel'
 import Growl from './components/atoms/Growl'
 import Checkbox from './components/atoms/Checkbox'
+import RadioGroup from './components/molecules/RadioGroup'
+
 import ButtonGroup from './components/molecules/ButtonGroup'
 
 const toggleGrowl = () =>
   document.getElementById('growlInfo') &&
   document.getElementById('growlInfo').classList.toggle('cg-growl-msg--open')
+
+const handleCheckboxClick = checked => {
+  console.log(checked)
+}
+
+const handleOnRadioChange = selected => {
+  console.log(selected)
+}
 
 function App() {
   const testLeftClick = () => {
@@ -23,6 +33,25 @@ function App() {
   const testRightClick = () => {
     console.log('right click')
   }
+
+  const onButtonClick = e => {
+    console.log(e.target)
+  }
+
+  const radioOptions = [
+    {
+      label: 'option 1',
+      value: 'id1',
+    },
+    {
+      label: 'option 2',
+      value: 'id2',
+    },
+    {
+      label: 'option 3',
+      value: 'id3',
+    },
+  ]
 
   return (
     <div className="App">
@@ -56,7 +85,12 @@ function App() {
       </Card>
 
       <Card style={{ padding: '20px' }}>
-        <Button outline size="xsmall" style={{ margin: '10px' }}>
+        <Button
+          outline
+          size="xsmall"
+          style={{ margin: '10px' }}
+          onClick={onButtonClick}
+        >
           Extra Small Outline
         </Button>
         <Button solid size="small" style={{ margin: '10px' }}>
@@ -139,9 +173,13 @@ function App() {
         <Checkbox id="myCheckbox" checked style={{ marginBottom: '15px' }}>
           This is a checked checkbox
         </Checkbox>
-        <Checkbox id="myCheckbox2">
-          This is an unchecked checkbox <a href="#">with a link</a>
+        <Checkbox id="myCheckbox2" onClick={handleCheckboxClick}>
+          This is an unchecked checkbox <a href="#test">with a link</a>
         </Checkbox>
+      </Card>
+
+      <Card style={{ padding: '20px' }}>
+        <RadioGroup options={radioOptions} onChange={handleOnRadioChange}></RadioGroup>
       </Card>
     </div>
   )

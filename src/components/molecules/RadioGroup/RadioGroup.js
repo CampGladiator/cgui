@@ -3,13 +3,13 @@ import PropTypes from 'prop-types'
 import Fieldset from '../../atoms/Fieldset'
 import './RadioGroup.scss'
 
-const Radio = ({ label, value, checked = false, onClick }) => (
+const Radio = ({ label, value, checked = false, onChange }) => (
   <label className={`cg-radio-list__item`} htmlFor={value}>
     <input
       className="cg-radio-list__input"
       id={value}
       checked={checked}
-      onChange={onClick}
+      onChange={onChange}
       type="radio"
       value={value}
     />
@@ -24,19 +24,21 @@ Radio.propTypes = {
   onClick: PropTypes.func,
 }
 
-const RadioGroup = ({ options, onClick }) => {
+const RadioGroup = ({ options, onChange, className = '' }) => {
   const [selected, setSelected] = useState('')
 
   return (
-    <Fieldset className="cg-radio-list">
+    <Fieldset className={`cg-radio-list ${className}`}>
       {options.map(option => (
         <Radio
           key={option.value}
           value={option.value}
-          onClick={e => setSelected(e.target.value)}
+          onChange={e => {
+            setSelected(e.target.value)
+            onChange(e.target.value)
+          }}
           checked={selected === option.value}
           label={option.label}
-          onChange={onClick}
         ></Radio>
       ))}
     </Fieldset>
@@ -50,6 +52,7 @@ const Option = PropTypes.shape({
 
 RadioGroup.propTypes = {
   options: PropTypes.arrayOf(Option),
+  className: PropTypes.string,
   onChange: PropTypes.func,
 }
 

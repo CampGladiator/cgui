@@ -11,7 +11,7 @@ describe('<Checkbox />', () => {
     expect(
       shallow(<Checkbox id="test" checked />)
         .find('input[type="checkbox"]')
-        .props().defaultCqhecked,
+        .props().defaultChecked,
     ).toEqual(true)
   })
 })

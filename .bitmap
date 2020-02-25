@@ -93,7 +93,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "campgladiator.cgui/components/atoms/checkbox@0.0.3": {
+    "campgladiator.cgui/components/atoms/checkbox@0.0.4": {
         "files": [
             {
                 "relativePath": "src/components/atoms/Checkbox/Checkbox.js",
@@ -342,6 +342,34 @@
         ],
         "mainFile": "src/components/molecules/ButtonGroup/index.js",
         "trackDir": "src/components/molecules/ButtonGroup",
+        "origin": "AUTHORED",
+        "exported": true
+    },
+    "campgladiator.cgui/components/molecules/radio-group@0.0.1": {
+        "files": [
+            {
+                "relativePath": "src/components/molecules/RadioGroup/RadioGroup.js",
+                "test": false,
+                "name": "RadioGroup.js"
+            },
+            {
+                "relativePath": "src/components/molecules/RadioGroup/RadioGroup.scss",
+                "test": false,
+                "name": "RadioGroup.scss"
+            },
+            {
+                "relativePath": "src/components/molecules/RadioGroup/RadioGroup.spec.js",
+                "test": true,
+                "name": "RadioGroup.spec.js"
+            },
+            {
+                "relativePath": "src/components/molecules/RadioGroup/index.js",
+                "test": false,
+                "name": "index.js"
+            }
+        ],
+        "mainFile": "src/components/molecules/RadioGroup/index.js",
+        "trackDir": "src/components/molecules/RadioGroup",
         "origin": "AUTHORED",
         "exported": true
     },

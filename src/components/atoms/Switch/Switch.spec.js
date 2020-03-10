@@ -4,8 +4,7 @@ import Switch from './Switch'
 
 describe('<Switch />', () => {
   it('renders without crashing', () => {
-    expect(() => shallow(<
-Switch id="test" />)).not.toThrow()
+    expect(() => shallow(<Switch id="test" />)).not.toThrow()
   })
 
   it('is checked when the checked prop is passed', () => {

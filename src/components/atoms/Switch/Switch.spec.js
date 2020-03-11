@@ -4,14 +4,28 @@ import Switch from './Switch'
 
 describe('<Switch />', () => {
   it('renders without crashing', () => {
-    expect(() => shallow(<Switch id="test" />)).not.toThrow()
+    expect(() => shallow(<Switch />)).not.toThrow()
   })
 
-  it('is checked when the checked prop is passed', () => {
+  it('accepts any extra classes', () => {
     expect(
-      shallow(<Switch id="test" checked />)
-        .find('input[type="checkbox"]')
-        .props().defaultChecked,
-    ).toEqual(true)
+      shallow(<Switch className="my-switch" />).hasClass('my-switch'),
+    ).toBe(true)
+  })
+
+  it('Switch defaults to off', () => {
+    expect(
+      shallow(<Switch />)
+        .find('span')
+        .hasClass('cg-switch__toggle--on'),
+    ).toBe(false)
+  })
+
+  it('auto-on when defaultOn prop supplied', () => {
+    expect(
+      shallow(<Switch defaultOn />)
+        .find('span')
+        .hasClass('cg-switch__toggle--on'),
+    ).toBe(true)
   })
 })

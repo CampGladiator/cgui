@@ -16,7 +16,7 @@ const Switch = ({
   }, [active, onChange])
 
   return (
-    <div className="cg-switch" {...props}>
+    <div className={`cg-switch ${className}`} {...props}>
       <span
         className={`cg-switch cg-switch__toggle ${
           active ? 'cg-switch__toggle--on' : ''

@@ -10,6 +10,7 @@ import FormLabel from './components/atoms/FormLabel'
 import Growl from './components/atoms/Growl'
 import Checkbox from './components/atoms/Checkbox'
 import Switch from './components/atoms/Switch'
+import Chart from './components/atoms/Chart'
 import RadioGroup from './components/molecules/RadioGroup'
 import ButtonGroup from './components/molecules/ButtonGroup'
 
@@ -195,6 +196,12 @@ function App() {
         <Switch onChange={handleToggleSwitch2}>
           This switch is currently {`${switch2Status ? 'On' : ' Off'}`}
         </Switch>
+      </Card>
+
+      <Card style={{ padding: '20px' }}>
+        <Chart large>12</Chart>
+        <Chart normal>6</Chart>
+        <Chart small>2</Chart>
       </Card>
     </div>
   )

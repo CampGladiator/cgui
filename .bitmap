@@ -317,6 +317,34 @@
         "origin": "AUTHORED",
         "exported": true
     },
+    "campgladiator.cgui/components/atoms/switch@0.0.1": {
+        "files": [
+            {
+                "relativePath": "src/components/atoms/Switch/Switch.js",
+                "test": false,
+                "name": "Switch.js"
+            },
+            {
+                "relativePath": "src/components/atoms/Switch/Switch.scss",
+                "test": false,
+                "name": "Switch.scss"
+            },
+            {
+                "relativePath": "src/components/atoms/Switch/Switch.spec.js",
+                "test": true,
+                "name": "Switch.spec.js"
+            },
+            {
+                "relativePath": "src/components/atoms/Switch/index.js",
+                "test": false,
+                "name": "index.js"
+            }
+        ],
+        "mainFile": "src/components/atoms/Switch/index.js",
+        "trackDir": "src/components/atoms/Switch",
+        "origin": "AUTHORED",
+        "exported": true
+    },
     "campgladiator.cgui/components/molecules/button-group@0.0.5": {
         "files": [
             {

@@ -9,6 +9,5 @@ describe('<Card />', () => {
 
   it('accepts any extra classes', () => {
     expect(shallow(<Card className="my-card" />).hasClass('my-card')).toBe(true)
-    expect(shallow(<Card className="my-card" />).hasClass('cg-card')).toBe(true)
   })
 })

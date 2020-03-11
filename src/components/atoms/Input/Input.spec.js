@@ -17,7 +17,7 @@ describe('<Input />', () => {
     ).toBeTruthy()
   })
 
-  it('should allow additional, user-provided classes', () => {
+  it('should allow additional, user provided classes', () => {
     expect(
       shallow(<Input centered rounded />)
         .find('.cg-input--centered')

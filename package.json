@@ -53,14 +53,14 @@
     "env": {
       "compiler": "bit.envs/compilers/react@1.0.14"
     },
+    "componentsDefaultDirectory": "components/{name}",
+    "packageManager": "yarn",
     "overrides": {
       "utilities": {
         "env": {
           "compiler": "bit.envs/compilers/babel@7.0.4"
         }
       }
-    },
-    "componentsDefaultDirectory": "components/{name}",
-    "packageManager": "yarn"
+    }
   }
 }

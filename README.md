@@ -25,4 +25,19 @@ This workflow allows us to use this repo (synced with the bit.dev repository) as
 
 This architecture also allows us to properly test our components thoroughly before using them in production projects.
 
-## 
+## Contributing
+
+#### Work on existing components
+When working on an existing component in the library, first be sure to run `yarn sync` to import the latest versions of all components. This is important since components can be updated outside of this working repository.
+
+After you have started making changes to your component, use `bit add .` to track any changes you have made.
+
+Once you have imported the component, you can work on your improvements as needed. **Keep in mind that all components should have full unit test coverage of their functionality and logic.**
+
+Run `bit status` at any time to see the status of tracked components.
+
+Once you have finished work on a tracked component, you can tag it with a new version for release. `bit tag --all` will automatically bump version numbers to the next patch or minor release as needed. To manually change the version number, use: `bit tag <path/to/component> <new_version_number>`
+
+Once your component or components have been versioned, you can export them to the bit.dev server using: `bit export campgladiator.cgui`
+
+If you come across any merge conflicts while exporting, this is likely a result of you not having the most recent version of a component pulled down locally. In such a case, the easiest solution is to checkout the remote version of the component using `bit checkout <version_number> campgladiator.cgui/<remote/path/to/component>`. This will allow you to resolve any merge conflicts between the two versions.

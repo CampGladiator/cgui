@@ -36,8 +36,12 @@ Once you have imported the component, you can work on your improvements as neede
 
 Run `bit status` at any time to see the status of tracked components.
 
-Once you have finished work on a tracked component, you can tag it with a new version for release. `bit tag --all` will automatically bump version numbers to the next patch or minor release as needed. To manually change the version number, use: `bit tag <path/to/component> <new_version_number>`
+Once you have finished work on a tracked component you should build it to ensure it compiles without errors: `bit build <component_id>`
+
+Once you have ensured your component builds correctly, you can tag it with a new version for release. `bit tag --all` will automatically bump version numbers to the next patch or minor release as needed. To manually change the version number, use: `bit tag <component_id> <new_version_number>`
 
 Once your component or components have been versioned, you can export them to the bit.dev server using: `bit export campgladiator.cgui`
 
-If you come across any merge conflicts while exporting, this is likely a result of you not having the most recent version of a component pulled down locally. In such a case, the easiest solution is to checkout the remote version of the component using `bit checkout <version_number> campgladiator.cgui/<remote/path/to/component>`. This will allow you to resolve any merge conflicts between the two versions.
+If you come across any merge conflicts while exporting, this is likely a result of you not having the most recent version of a component pulled down locally.
+
+You can learn more about fixing these types of merge conflicts [here](https://docs.bit.dev/docs/sourcing-components#merge-remote-conflicts)

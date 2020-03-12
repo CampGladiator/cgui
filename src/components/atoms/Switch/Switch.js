@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react'
 import PropTypes from 'prop-types'
-import './Switch.js'
 import './Switch.scss'
 
 const Switch = ({
@@ -17,7 +16,7 @@ const Switch = ({
   }, [active, onChange])
 
   return (
-    <div className="cg-switch" {...props}>
+    <div className={`cg-switch ${className}`} {...props}>
       <span
         className={`cg-switch cg-switch__toggle ${
           active ? 'cg-switch__toggle--on' : ''

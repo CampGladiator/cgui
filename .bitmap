@@ -68,24 +68,24 @@
     "campgladiator.cgui/components/atoms/card@0.0.2": {
         "files": [
             {
+                "name": "Card.js",
                 "relativePath": "src/components/atoms/Card/Card.js",
-                "test": false,
-                "name": "Card.js"
+                "test": false
             },
             {
+                "name": "Card.scss",
                 "relativePath": "src/components/atoms/Card/Card.scss",
-                "test": false,
-                "name": "Card.scss"
+                "test": false
             },
             {
+                "name": "Card.spec.js",
                 "relativePath": "src/components/atoms/Card/Card.spec.js",
-                "test": true,
-                "name": "Card.spec.js"
+                "test": true
             },
             {
+                "name": "index.js",
                 "relativePath": "src/components/atoms/Card/index.js",
-                "test": false,
-                "name": "index.js"
+                "test": false
             }
         ],
         "mainFile": "src/components/atoms/Card/index.js",
@@ -261,27 +261,27 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "campgladiator.cgui/components/atoms/input@0.0.2": {
+    "campgladiator.cgui/components/atoms/input@0.0.3": {
         "files": [
             {
+                "name": "Input.js",
                 "relativePath": "src/components/atoms/Input/Input.js",
-                "test": false,
-                "name": "Input.js"
+                "test": false
             },
             {
+                "name": "Input.scss",
                 "relativePath": "src/components/atoms/Input/Input.scss",
-                "test": false,
-                "name": "Input.scss"
+                "test": false
             },
             {
+                "name": "Input.spec.js",
                 "relativePath": "src/components/atoms/Input/Input.spec.js",
-                "test": true,
-                "name": "Input.spec.js"
+                "test": true
             },
             {
+                "name": "index.js",
                 "relativePath": "src/components/atoms/Input/index.js",
-                "test": false,
-                "name": "index.js"
+                "test": false
             }
         ],
         "mainFile": "src/components/atoms/Input/index.js",
@@ -314,6 +314,34 @@
         ],
         "mainFile": "src/components/atoms/Loader/index.js",
         "trackDir": "src/components/atoms/Loader",
+        "origin": "AUTHORED",
+        "exported": true
+    },
+    "campgladiator.cgui/components/atoms/switch@0.0.2": {
+        "files": [
+            {
+                "relativePath": "src/components/atoms/Switch/Switch.js",
+                "test": false,
+                "name": "Switch.js"
+            },
+            {
+                "relativePath": "src/components/atoms/Switch/Switch.scss",
+                "test": false,
+                "name": "Switch.scss"
+            },
+            {
+                "relativePath": "src/components/atoms/Switch/Switch.spec.js",
+                "test": true,
+                "name": "Switch.spec.js"
+            },
+            {
+                "relativePath": "src/components/atoms/Switch/index.js",
+                "test": false,
+                "name": "index.js"
+            }
+        ],
+        "mainFile": "src/components/atoms/Switch/index.js",
+        "trackDir": "src/components/atoms/Switch",
         "origin": "AUTHORED",
         "exported": true
     },

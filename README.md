@@ -1,68 +1,28 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Overview
 
-## Available Scripts
+Welcome to the CGUI react library, with component syncing to bit.dev.
 
-In the project directory, you can run:
+## Getting Started with Bit
 
-### `yarn start`
+After pulling down this repository, you'll need to set up a connection between your machine, the repo, and the bit.dev server.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+If you aren't yet familiar with the bit system and architecture, please [review their documentation](https://docs.bit.dev/docs/quick-start) before contributing to this project.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+#### Installation
 
-### `yarn test`
+First, ensure bit is installed globally on your machine. You can find instructions for installing bit here: https://docs.bit.dev/docs/installation
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Once bit is installed locally, you will need to ensure your local components in the repo are synced with bit.
 
-### `yarn build`
+> It is important that you import before any new work is started on an existing component. Much like rebasing with git, if you start work on an existing component without pulling in the newest changes from remote, you will end up with merge conflicts.
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+run `yarn sync` to automatically import and list component states for changed components in the bit.dev repository.
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+## Architecture
+Our bit architecture uses the proposed Centralized Library workflow described [here](https://docs.bit.dev/docs/workflows/centralized).
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+This workflow allows us to use this repo (synced with the bit.dev repository) as the source of truth for all of our react components. This also works as a backup for our react library in the event of an outage or other availability issues with the bit.dev server.
 
-### `yarn eject`
+This architecture also allows us to properly test our components thoroughly before using them in production projects.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+## 

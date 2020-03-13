@@ -11,6 +11,7 @@ import Growl from './components/atoms/Growl'
 import Checkbox from './components/atoms/Checkbox'
 import Switch from './components/atoms/Switch'
 import Chart from './components/atoms/Chart'
+import ImageLabel from './components/atoms/ImageLabel'
 import RadioGroup from './components/molecules/RadioGroup'
 import ButtonGroup from './components/molecules/ButtonGroup'
 
@@ -202,6 +203,55 @@ function App() {
         <Chart large>12</Chart>
         <Chart normal>6</Chart>
         <Chart small>2</Chart>
+      </Card>
+
+      <Card style={{ paddig: '20px' }}>
+        <div
+          style={{
+            width: '600px',
+            padding: '20px',
+            display: 'grid',
+            gridTemplateRows: 'repeat(2, 1fr)',
+            gridTemplateColumns: 'auto',
+            gridAutoFlow: 'column',
+            justifyItems: 'center',
+            alignItems: 'center',
+            gap: '0',
+          }}
+        >
+          <figure style={{ position: 'relative' }}>
+            <img
+              src="https://cgui.campgladiator.com/images/shirt.jpg"
+              alt="red CG shirt"
+              style={{ maxWidth: '100%' }}
+            />
+            <ImageLabel primary>on sale</ImageLabel>
+          </figure>
+          <figure style={{ position: 'relative' }}>
+            <img
+              src="https://cgui.campgladiator.com/images/shirt.jpg"
+              alt="red CG shirt"
+              style={{ maxWidth: '100%' }}
+            />
+            <ImageLabel position="topLeft" secondary>featured</ImageLabel>
+          </figure>
+          <figure style={{ position: 'relative' }}>
+            <img
+              src="https://cgui.campgladiator.com/images/shirt.jpg"
+              alt="red CG shirt"
+              style={{ maxWidth: '100%' }}
+            />
+            <ImageLabel position="bottomRight" small>reduced</ImageLabel>
+          </figure>
+          <figure style={{ position: 'relative' }}>
+            <img
+              src="https://cgui.campgladiator.com/images/shirt.jpg"
+              alt="red CG shirt"
+              style={{ maxWidth: '100%' }}
+            />
+            <ImageLabel position="bottomLeft" small>sold out</ImageLabel>
+          </figure>
+        </div>
       </Card>
     </div>
   )

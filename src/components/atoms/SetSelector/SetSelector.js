@@ -30,7 +30,7 @@ SetSelector.defaultProps = {
 SetSelector.propTypes = {
   selected: PropTypes.bool,
   className: PropTypes.string,
-  children: PropTypes.string,
+  children: PropTypes.node,
 }
 
 export default SetSelector

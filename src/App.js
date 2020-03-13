@@ -262,10 +262,12 @@ function App() {
       </Card>
 
       <Card style={{ padding: '20px' }}>
-        <SetSelector selected>x</SetSelector>
+        <SetSelector>x</SetSelector>
         <SetSelector disabled>xs</SetSelector>
-        <SetSelector>m</SetSelector>
-        <SetSelector>xl</SetSelector>
+        <SetSelector selected>m</SetSelector>
+        <SetSelector>
+          <Icon name="check" size={20} />
+        </SetSelector>
       </Card>
     </div>
   )

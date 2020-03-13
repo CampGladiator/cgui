@@ -345,6 +345,34 @@
         "origin": "AUTHORED",
         "exported": true
     },
+    "campgladiator.cgui/components/atoms/set-selector@0.0.1": {
+        "files": [
+            {
+                "relativePath": "src/components/atoms/SetSelector/SetSelector.js",
+                "test": false,
+                "name": "SetSelector.js"
+            },
+            {
+                "relativePath": "src/components/atoms/SetSelector/SetSelector.scss",
+                "test": false,
+                "name": "SetSelector.scss"
+            },
+            {
+                "relativePath": "src/components/atoms/SetSelector/SetSelector.spec.js",
+                "test": true,
+                "name": "SetSelector.spec.js"
+            },
+            {
+                "relativePath": "src/components/atoms/SetSelector/index.js",
+                "test": false,
+                "name": "index.js"
+            }
+        ],
+        "mainFile": "src/components/atoms/SetSelector/index.js",
+        "trackDir": "src/components/atoms/SetSelector",
+        "origin": "AUTHORED",
+        "exported": true
+    },
     "campgladiator.cgui/components/atoms/switch@0.0.2": {
         "files": [
             {

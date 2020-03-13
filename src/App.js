@@ -12,6 +12,7 @@ import Checkbox from './components/atoms/Checkbox'
 import Switch from './components/atoms/Switch'
 import Chart from './components/atoms/Chart'
 import ImageLabel from './components/atoms/ImageLabel'
+import SetSelector from './components/atoms/SetSelector'
 import RadioGroup from './components/molecules/RadioGroup'
 import ButtonGroup from './components/molecules/ButtonGroup'
 
@@ -233,7 +234,9 @@ function App() {
               alt="red CG shirt"
               style={{ maxWidth: '100%' }}
             />
-            <ImageLabel position="topLeft" secondary>featured</ImageLabel>
+            <ImageLabel position="topLeft" secondary>
+              featured
+            </ImageLabel>
           </figure>
           <figure style={{ position: 'relative' }}>
             <img
@@ -241,7 +244,9 @@ function App() {
               alt="red CG shirt"
               style={{ maxWidth: '100%' }}
             />
-            <ImageLabel position="bottomRight" small>reduced</ImageLabel>
+            <ImageLabel position="bottomRight" small>
+              reduced
+            </ImageLabel>
           </figure>
           <figure style={{ position: 'relative' }}>
             <img
@@ -249,9 +254,18 @@ function App() {
               alt="red CG shirt"
               style={{ maxWidth: '100%' }}
             />
-            <ImageLabel position="bottomLeft" small>sold out</ImageLabel>
+            <ImageLabel position="bottomLeft" small>
+              sold out
+            </ImageLabel>
           </figure>
         </div>
+      </Card>
+
+      <Card style={{ padding: '20px' }}>
+        <SetSelector selected>x</SetSelector>
+        <SetSelector disabled>xs</SetSelector>
+        <SetSelector>m</SetSelector>
+        <SetSelector>xl</SetSelector>
       </Card>
     </div>
   )

@@ -261,6 +261,34 @@
         "origin": "AUTHORED",
         "exported": true
     },
+    "campgladiator.cgui/components/atoms/image-label@0.0.2": {
+        "files": [
+            {
+                "relativePath": "src/components/atoms/ImageLabel/ImageLabel.js",
+                "test": false,
+                "name": "ImageLabel.js"
+            },
+            {
+                "relativePath": "src/components/atoms/ImageLabel/ImageLabel.scss",
+                "test": false,
+                "name": "ImageLabel.scss"
+            },
+            {
+                "relativePath": "src/components/atoms/ImageLabel/ImageLabel.spec.js",
+                "test": true,
+                "name": "ImageLabel.spec.js"
+            },
+            {
+                "relativePath": "src/components/atoms/ImageLabel/index.js",
+                "test": false,
+                "name": "index.js"
+            }
+        ],
+        "mainFile": "src/components/atoms/ImageLabel/index.js",
+        "trackDir": "src/components/atoms/ImageLabel",
+        "origin": "AUTHORED",
+        "exported": true
+    },
     "campgladiator.cgui/components/atoms/input@0.0.3": {
         "files": [
             {

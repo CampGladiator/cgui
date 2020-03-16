@@ -25,6 +25,18 @@
         "origin": "AUTHORED",
         "exported": true
     },
+    "campgladiator.cgui/assets/styles/mixins@0.0.1": {
+        "files": [
+            {
+                "relativePath": "src/assets/styles/mixins.scss",
+                "test": false,
+                "name": "mixins.scss"
+            }
+        ],
+        "mainFile": "src/assets/styles/mixins.scss",
+        "origin": "AUTHORED",
+        "exported": true
+    },
     "campgladiator.cgui/assets/styles/variables@0.0.1": {
         "files": [
             {
@@ -342,6 +354,34 @@
         ],
         "mainFile": "src/components/atoms/Loader/index.js",
         "trackDir": "src/components/atoms/Loader",
+        "origin": "AUTHORED",
+        "exported": true
+    },
+    "campgladiator.cgui/components/atoms/logo@0.0.1": {
+        "files": [
+            {
+                "relativePath": "src/components/atoms/Logo/Logo.js",
+                "test": false,
+                "name": "Logo.js"
+            },
+            {
+                "relativePath": "src/components/atoms/Logo/Logo.scss",
+                "test": false,
+                "name": "Logo.scss"
+            },
+            {
+                "relativePath": "src/components/atoms/Logo/Logo.spec.js",
+                "test": true,
+                "name": "Logo.spec.js"
+            },
+            {
+                "relativePath": "src/components/atoms/Logo/index.js",
+                "test": false,
+                "name": "index.js"
+            }
+        ],
+        "mainFile": "src/components/atoms/Logo/index.js",
+        "trackDir": "src/components/atoms/Logo",
         "origin": "AUTHORED",
         "exported": true
     },

@@ -7,7 +7,7 @@ $logo-cdn-path: 'https://s3.amazonaws.com/cgcdn/global-ui/images/logos/campgladi
 }
 
 .cg-logo {
-  width: 100%;
+  max-width: 100%;
   display: inline-block;
 
   &__img {

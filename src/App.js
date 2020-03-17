@@ -272,14 +272,14 @@ function App() {
       </Card>
 
       <Card style={{ padding: '20px', backgroundColor: '#bbb' }}>
-        <Logo.Icon width="50px" style={{ padding: '30px' }} primary />
+        <Logo.Icon width="10px" style={{ padding: '30px' }} primary />
         <Logo.Icon width="50px" style={{ padding: '30px' }} secondary />
         <Logo.Icon width="50px" style={{ padding: '30px' }} black />
         <Logo.Icon width="50px" style={{ padding: '30px' }} white />
         <Logo.Icon width="50px" style={{ padding: '30px' }} light />
         <Logo.Icon width="50px" style={{ padding: '30px' }} gray />
         <hr />
-        <Logo.Full style={{ padding: '30px' }} primary />
+        <Logo.Full width='30px' style={{ padding: '30px' }} primary />
         <Logo.Full style={{ padding: '30px' }} secondary />
         <Logo.Full style={{ padding: '30px' }} black />
         <Logo.Full style={{ padding: '30px' }} white />

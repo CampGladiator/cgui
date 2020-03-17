@@ -18,13 +18,21 @@ const Logo = ({
   className,
   style,
   ...props
-}) => (
-  <div className={`cg-logo`} style={{ maxWidth: width, ...style }} {...props}>
-    <span className={mods('cg-logo__img', { icon, full }, className)}>
-      {children}
-    </span>
-  </div>
-)
+}) => {
+  const minWidth = full ? '120px' : '20px'
+
+  return (
+    <div
+      className={`cg-logo`}
+      style={{ width: width, minWidth: minWidth, ...style }}
+      {...props}
+    >
+      <span className={mods('cg-logo__img', { icon, full }, className)}>
+        {children}
+      </span>
+    </div>
+  )
+}
 
 const Icon = ({
   className,

@@ -1,0 +1,77 @@
+@import '../../../assets/styles/mixins.scss';
+
+$logo-cdn-path: 'https://s3.amazonaws.com/cgcdn/global-ui/images/logos/campgladiator/';
+
+@mixin add-logo-background-image($name) {
+  @include add-background-image($logo-cdn-path, $name);
+}
+
+.cg-logo {
+  max-width: 100%;
+  display: inline-block;
+
+  &__img {
+    width: 100%;
+    height: 0;
+    display: block;
+    outline: 0;
+    border: 0 none;
+    text-indent: -9999px;
+    font-size: 0;
+    background-repeat: no-repeat;
+    background-position: 0;
+    background-size: 100%;
+
+    &__full {
+      padding-bottom: 20.5%;
+
+      &--primary {
+        @include add-logo-background-image('full-color-black.svg');
+      }
+
+      &--secondary {
+        @include add-logo-background-image('full-color-white.svg');
+      }
+
+      &--mono {
+        @include add-logo-background-image('full-black-white.svg');
+      }
+
+      &--white {
+        @include add-logo-background-image('full-white.svg');
+      }
+
+      &--black {
+        @include add-logo-background-image('full-black.svg');
+      }
+    }
+
+    &__icon {
+      padding-bottom: 100%;
+
+      &--primary {
+        @include add-logo-background-image('icon-default.svg');
+      }
+
+      &--secondary {
+        @include add-logo-background-image('icon-navy.svg');
+      }
+
+      &--white {
+        @include add-logo-background-image('icon-white.svg');
+      }
+
+      &--black {
+        @include add-logo-background-image('icon-black.svg');
+      }
+
+      &--gray {
+        @include add-logo-background-image('icon-gray.svg');
+      }
+
+      &--light {
+        @include add-logo-background-image('icon-light.svg');
+      }
+    }
+  }
+}

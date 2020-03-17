@@ -13,6 +13,7 @@ import Switch from './components/atoms/Switch'
 import Chart from './components/atoms/Chart'
 import ImageLabel from './components/atoms/ImageLabel'
 import SetSelector from './components/atoms/SetSelector'
+import Logo from './components/atoms/Logo'
 import RadioGroup from './components/molecules/RadioGroup'
 import ButtonGroup from './components/molecules/ButtonGroup'
 
@@ -268,6 +269,21 @@ function App() {
         <SetSelector>
           <Icon name="check" size={20} />
         </SetSelector>
+      </Card>
+
+      <Card style={{ padding: '20px', backgroundColor: '#bbb' }}>
+        <Logo.Icon width="10px" style={{ padding: '30px' }} primary />
+        <Logo.Icon width="50px" style={{ padding: '30px' }} secondary />
+        <Logo.Icon width="50px" style={{ padding: '30px' }} black />
+        <Logo.Icon width="50px" style={{ padding: '30px' }} white />
+        <Logo.Icon width="50px" style={{ padding: '30px' }} light />
+        <Logo.Icon width="50px" style={{ padding: '30px' }} gray />
+        <hr />
+        <Logo.Full width='30px' style={{ padding: '30px' }} primary />
+        <Logo.Full style={{ padding: '30px' }} secondary />
+        <Logo.Full style={{ padding: '30px' }} black />
+        <Logo.Full style={{ padding: '30px' }} white />
+        <Logo.Full style={{ padding: '30px' }} mono />
       </Card>
     </div>
   )

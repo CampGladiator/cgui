@@ -49,6 +49,39 @@
         "origin": "AUTHORED",
         "exported": true
     },
+    "campgladiator.cgui/components/atoms/avatar@0.0.2": {
+        "files": [
+            {
+                "relativePath": "src/components/atoms/Avatar/Avatar.js",
+                "test": false,
+                "name": "Avatar.js"
+            },
+            {
+                "relativePath": "src/components/atoms/Avatar/Avatar.md",
+                "test": false,
+                "name": "Avatar.md"
+            },
+            {
+                "relativePath": "src/components/atoms/Avatar/Avatar.scss",
+                "test": false,
+                "name": "Avatar.scss"
+            },
+            {
+                "relativePath": "src/components/atoms/Avatar/Avatar.spec.js",
+                "test": true,
+                "name": "Avatar.spec.js"
+            },
+            {
+                "relativePath": "src/components/atoms/Avatar/index.js",
+                "test": false,
+                "name": "index.js"
+            }
+        ],
+        "mainFile": "src/components/atoms/Avatar/index.js",
+        "trackDir": "src/components/atoms/Avatar",
+        "origin": "AUTHORED",
+        "exported": true
+    },
     "campgladiator.cgui/components/atoms/button@0.0.4": {
         "files": [
             {

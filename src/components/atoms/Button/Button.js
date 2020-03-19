@@ -46,6 +46,21 @@ const Button = ({
 
 const Size = PropTypes.oneOf(['xsmall', 'small', 'large', 'xlarge'])
 
+Button.defaultProps = {
+  className: '',
+  id: '',
+  icon: '',
+  primary: false,
+  secondary: false,
+  solid: false,
+  outline: false,
+  dark: false,
+  gray: false,
+  white: false,
+  loading: false,
+  disabled: false,
+}
+
 Button.propTypes = {
   className: PropTypes.string,
   id: PropTypes.string,

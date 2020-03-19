@@ -82,27 +82,27 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "campgladiator.cgui/components/atoms/button@0.0.4": {
+    "campgladiator.cgui/components/atoms/button@0.0.5": {
         "files": [
             {
+                "name": "Button.js",
                 "relativePath": "src/components/atoms/Button/Button.js",
-                "test": false,
-                "name": "Button.js"
+                "test": false
             },
             {
+                "name": "Button.scss",
                 "relativePath": "src/components/atoms/Button/Button.scss",
-                "test": false,
-                "name": "Button.scss"
+                "test": false
             },
             {
+                "name": "Button.spec.js",
                 "relativePath": "src/components/atoms/Button/Button.spec.js",
-                "test": true,
-                "name": "Button.spec.js"
+                "test": true
             },
             {
+                "name": "index.js",
                 "relativePath": "src/components/atoms/Button/index.js",
-                "test": false,
-                "name": "index.js"
+                "test": false
             }
         ],
         "mainFile": "src/components/atoms/Button/index.js",

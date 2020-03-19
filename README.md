@@ -27,7 +27,7 @@ This architecture also allows us to properly test our components thoroughly befo
 
 ## Contributing
 
-#### Work on existing components
+### Work on existing components
 When working on an existing component in the library, first be sure to run `yarn sync` to import the latest versions of all components. This is important since components can be updated outside of this working repository.
 
 Once you have imported the component, you can work on your improvements as needed. **Keep in mind that all components should have full unit test coverage of their functionality and logic.**
@@ -44,11 +44,12 @@ If you come across any merge conflicts while exporting, this is likely a result 
 
 You can learn more about fixing these types of merge conflicts [here](https://docs.bit.dev/docs/sourcing-components#merge-remote-conflicts)
 
-#### Work on new components
+### Work on new components
 First identify if you new component constitutes an atom, molecule, organism, template, or page based on the [atomic design principle](https://bradfrost.com/blog/post/atomic-web-design/). This project has a folder for each grouping allowing you to keep your components organized by this paradigm.
 
-To create your component, you can follow the structure you see used by other components in the repo. Set all component files up in a single folder named the same as the component. Include the main component file, along with a .scss file, if needed, a test/spec file and an index file which would allow exporting of the component by Bit.
+To create your component, you can follow the structure you see used by other components in the repo. Set all component files up in a single folder named the same as the component. Include the main component file, along with a .scss file, if needed, a test/spec file and an index file which would allow exporting of the component by Bit. Finally, a markdown file should be added to the component folder with the same name as the component file (ex: Button.js would have a Button.md file). This markdown file is where you would put any documentation for the component including instructions on how to use it.
 
+#### Tracking new components
 Once your component folder is structured, you'll want to set up tracking with your component and Bit. To do this run the following command:
 ```
 bit add <local/path/to/ComponentFolder> --tests <local/path/to/ComponentFolder/component.spec.js> --namespace <components/component_folder>
@@ -60,3 +61,20 @@ In the above example <components/component_folder> would be something like `comp
 ```
 bit add src/components/atoms/Button --tests src/components/atoms/Button/Button.spec.js --namespace components/atoms
 ```
+
+#### Versioning components
+Next, we must tag our components with new versions. Bit will automatically bump version numbers of updated components when you run `bit tag --all`
+
+#### Exporting components
+Similar to git, we need to finally export our components up to the remote repository, in this case, bit.dev, is our remote. To do this, we just run the export command followed by the collection we want to export to:
+
+```
+bit export campgladiator.cgui
+```
+
+This will export any components that have been tracked and tagged with a new version.
+
+With this done, your component(s) should now be available in the remote collection at: https://bit.dev/campgladiator/cgui
+
+### Adding documentation
+In addition to the .md file in the component directories, you can also add a general description to the component in bit.dev. Bit.dev also provides a sandbox where you should add examples of your component in use. Please see the bit.dev docs for more info about how to build examples: https://docs.bit.dev/docs/bit-dev#component-playground

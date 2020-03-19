@@ -49,27 +49,60 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "campgladiator.cgui/components/atoms/button@0.0.4": {
+    "campgladiator.cgui/components/atoms/avatar@0.0.6": {
         "files": [
             {
-                "relativePath": "src/components/atoms/Button/Button.js",
+                "relativePath": "src/components/atoms/Avatar/Avatar.js",
                 "test": false,
-                "name": "Button.js"
+                "name": "Avatar.js"
             },
             {
-                "relativePath": "src/components/atoms/Button/Button.scss",
+                "relativePath": "src/components/atoms/Avatar/Avatar.md",
                 "test": false,
-                "name": "Button.scss"
+                "name": "Avatar.md"
             },
             {
-                "relativePath": "src/components/atoms/Button/Button.spec.js",
+                "relativePath": "src/components/atoms/Avatar/Avatar.scss",
+                "test": false,
+                "name": "Avatar.scss"
+            },
+            {
+                "relativePath": "src/components/atoms/Avatar/Avatar.spec.js",
                 "test": true,
-                "name": "Button.spec.js"
+                "name": "Avatar.spec.js"
             },
             {
-                "relativePath": "src/components/atoms/Button/index.js",
+                "relativePath": "src/components/atoms/Avatar/index.js",
                 "test": false,
                 "name": "index.js"
+            }
+        ],
+        "mainFile": "src/components/atoms/Avatar/index.js",
+        "trackDir": "src/components/atoms/Avatar",
+        "origin": "AUTHORED",
+        "exported": true
+    },
+    "campgladiator.cgui/components/atoms/button@0.0.5": {
+        "files": [
+            {
+                "name": "Button.js",
+                "relativePath": "src/components/atoms/Button/Button.js",
+                "test": false
+            },
+            {
+                "name": "Button.scss",
+                "relativePath": "src/components/atoms/Button/Button.scss",
+                "test": false
+            },
+            {
+                "name": "Button.spec.js",
+                "relativePath": "src/components/atoms/Button/Button.spec.js",
+                "test": true
+            },
+            {
+                "name": "index.js",
+                "relativePath": "src/components/atoms/Button/index.js",
+                "test": false
             }
         ],
         "mainFile": "src/components/atoms/Button/index.js",
@@ -441,7 +474,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "campgladiator.cgui/components/molecules/button-group@0.0.5": {
+    "campgladiator.cgui/components/molecules/button-group@0.0.6": {
         "files": [
             {
                 "relativePath": "src/components/molecules/ButtonGroup/ButtonGroup.js",

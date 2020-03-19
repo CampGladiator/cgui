@@ -14,6 +14,7 @@ import Chart from './components/atoms/Chart'
 import ImageLabel from './components/atoms/ImageLabel'
 import SetSelector from './components/atoms/SetSelector'
 import Logo from './components/atoms/Logo'
+import Avatar from './components/atoms/Avatar'
 import RadioGroup from './components/molecules/RadioGroup'
 import ButtonGroup from './components/molecules/ButtonGroup'
 
@@ -279,11 +280,20 @@ function App() {
         <Logo.Icon width="50px" style={{ padding: '30px' }} light />
         <Logo.Icon width="50px" style={{ padding: '30px' }} gray />
         <hr />
-        <Logo.Full width='30px' style={{ padding: '30px' }} primary />
+        <Logo.Full width="30px" style={{ padding: '30px' }} primary />
         <Logo.Full style={{ padding: '30px' }} secondary />
         <Logo.Full style={{ padding: '30px' }} black />
         <Logo.Full style={{ padding: '30px' }} white />
         <Logo.Full style={{ padding: '30px' }} mono />
+      </Card>
+
+      <Card style={{ padding: '30px' }}>
+        <Avatar style={{ margin: '20px' }} />
+        <Avatar
+          alt="me"
+          src="https://en.gravatar.com/userimage/32884912/b318719acf13489f60cba203b71e4d15.png?size=200"
+          style={{ margin: '20px' }}
+        />
       </Card>
     </div>
   )

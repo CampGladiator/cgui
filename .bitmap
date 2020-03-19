@@ -49,7 +49,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "campgladiator.cgui/components/atoms/avatar@0.0.2": {
+    "campgladiator.cgui/components/atoms/avatar@0.0.3": {
         "files": [
             {
                 "relativePath": "src/components/atoms/Avatar/Avatar.js",
@@ -474,7 +474,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "campgladiator.cgui/components/molecules/button-group@0.0.5": {
+    "campgladiator.cgui/components/molecules/button-group@0.0.6": {
         "files": [
             {
                 "relativePath": "src/components/molecules/ButtonGroup/ButtonGroup.js",

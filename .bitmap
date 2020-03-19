@@ -49,7 +49,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "campgladiator.cgui/components/atoms/avatar@0.0.3": {
+    "campgladiator.cgui/components/atoms/avatar@0.0.4": {
         "files": [
             {
                 "relativePath": "src/components/atoms/Avatar/Avatar.js",

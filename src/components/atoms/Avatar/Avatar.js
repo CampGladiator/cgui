@@ -26,7 +26,7 @@ Avatar.propTypes = {
   alt: PropTypes.string,
   size: PropTypes.string,
   className: PropTypes.string,
-  style: PropTypes.Object,
+  style: PropTypes.object,
 }
 
 export default Avatar

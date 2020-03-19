@@ -21,14 +21,12 @@ Avatar.defaultProps = {
   style: '',
 }
 
-const Style = PropTypes.oneOf(['string', 'Object'])
-
 Avatar.propTypes = {
   src: PropTypes.string,
   alt: PropTypes.string,
   size: PropTypes.string,
   className: PropTypes.string,
-  style: Style,
+  style: PropTypes.Object,
 }
 
 export default Avatar

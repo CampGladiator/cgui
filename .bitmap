@@ -377,6 +377,34 @@
         "origin": "AUTHORED",
         "exported": true
     },
+    "campgladiator.cgui/components/atoms/heading@0.0.1": {
+        "files": [
+            {
+                "relativePath": "src/components/atoms/Heading/Heading.js",
+                "test": false,
+                "name": "Heading.js"
+            },
+            {
+                "relativePath": "src/components/atoms/Heading/Heading.scss",
+                "test": false,
+                "name": "Heading.scss"
+            },
+            {
+                "relativePath": "src/components/atoms/Heading/Heading.spec.js",
+                "test": true,
+                "name": "Heading.spec.js"
+            },
+            {
+                "relativePath": "src/components/atoms/Heading/index.js",
+                "test": false,
+                "name": "index.js"
+            }
+        ],
+        "mainFile": "src/components/atoms/Heading/index.js",
+        "trackDir": "src/components/atoms/Heading",
+        "origin": "AUTHORED",
+        "exported": true
+    },
     "campgladiator.cgui/components/atoms/icon@0.0.2": {
         "files": [
             {
@@ -697,34 +725,6 @@
         "mainFile": "src/utilities/mods.js",
         "origin": "AUTHORED",
         "exported": true
-    },
-    "components/atoms/heading": {
-        "files": [
-            {
-                "relativePath": "src/components/atoms/Heading/Heading.js",
-                "test": false,
-                "name": "Heading.js"
-            },
-            {
-                "relativePath": "src/components/atoms/Heading/Heading.scss",
-                "test": false,
-                "name": "Heading.scss"
-            },
-            {
-                "relativePath": "src/components/atoms/Heading/Heading.spec.js",
-                "test": true,
-                "name": "Heading.spec.js"
-            },
-            {
-                "relativePath": "src/components/atoms/Heading/index.js",
-                "test": false,
-                "name": "index.js"
-            }
-        ],
-        "mainFile": "src/components/atoms/Heading/index.js",
-        "trackDir": "src/components/atoms/Heading",
-        "origin": "AUTHORED",
-        "exported": false
     },
     "version": "14.7.6"
 }

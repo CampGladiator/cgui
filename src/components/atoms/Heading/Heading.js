@@ -25,11 +25,9 @@ const Heading = ({
     className,
   )
 
-  return headings.map(heading =>
-    heading === type
-      ? React.createElement(heading, { className: classes, ...props }, children)
-      : null,
-  )
+  return headings.includes(type)
+    ? React.createElement(type, { className: classes, ...props }, children)
+    : null
 }
 
 Heading.defaultProps = {

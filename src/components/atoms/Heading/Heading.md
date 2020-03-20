@@ -1,0 +1,5 @@
+### Primary Headings - Gotham
+Font Primary uses ‘Gotham’ headings, these are more versitile than United and can be useful in a larger array of situations. Gotham headings should always be ALL-CAPS, which is enforced by this component.
+
+### Display Headings - United
+Font Display uses ‘United Italic Condensed Heavy’ font. United is used for display heading font only. It is well-suited for large page header sections and other callout areas that need to grab the user's attention. Rarely if ever should United headings be used in tandem (ie. stacking United heading on top of another United heading). Typically, if a subheading or sibling heading is needed, Gotham is the best choice. Additionally, United should be the larger of the paired text, using Gotham for the subheading and/or smaller text sections. It’s best to use this font sparingly in order to maximize it’s visual impact. As per CG brand standards, the United font must always be ALL-CAPS, which is enforced by this component.

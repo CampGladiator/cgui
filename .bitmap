@@ -563,6 +563,39 @@
         "origin": "AUTHORED",
         "exported": true
     },
+    "campgladiator.cgui/components/atoms/badge@0.0.2": {
+        "files": [
+            {
+                "relativePath": "src/components/atoms/Badge/Badge.js",
+                "test": false,
+                "name": "Badge.js"
+            },
+            {
+                "relativePath": "src/components/atoms/Badge/Badge.md",
+                "test": false,
+                "name": "Badge.md"
+            },
+            {
+                "relativePath": "src/components/atoms/Badge/Badge.scss",
+                "test": false,
+                "name": "Badge.scss"
+            },
+            {
+                "relativePath": "src/components/atoms/Badge/Badge.spec.js",
+                "test": true,
+                "name": "Badge.spec.js"
+            },
+            {
+                "relativePath": "src/components/atoms/Badge/index.js",
+                "test": false,
+                "name": "index.js"
+            }
+        ],
+        "mainFile": "src/components/atoms/Badge/index.js",
+        "trackDir": "src/components/atoms/Badge",
+        "origin": "AUTHORED",
+        "exported": true
+    },
     "campgladiator.cgui/utilities/breakpoints@0.0.1": {
         "files": [
             {

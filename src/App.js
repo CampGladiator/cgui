@@ -16,6 +16,7 @@ import SetSelector from './components/atoms/SetSelector'
 import Logo from './components/atoms/Logo'
 import Avatar from './components/atoms/Avatar'
 import ProgressBar from './components/atoms/ProgressBar'
+import Badge from './components/atoms/Badge'
 import RadioGroup from './components/molecules/RadioGroup'
 import ButtonGroup from './components/molecules/ButtonGroup'
 
@@ -333,6 +334,28 @@ function App() {
           src="https://en.gravatar.com/userimage/32884912/b318719acf13489f60cba203b71e4d15.png?size=200"
           style={{ margin: '20px' }}
         />
+      </Card>
+      <Card style={{ padding: '20px', display: 'flex' }}>
+        <Badge />
+        <Badge bold />
+        <Badge bronze />
+        <Badge silver />
+        <Badge gold />
+        <Badge elite />
+        <hr />
+        <Badge type="plate" />
+        <Badge type="plate" bold />
+        <Badge type="plate" bronze />
+        <Badge type="plate" silver />
+        <Badge type="plate" gold />
+        <Badge type="plate" elite />
+        <hr />
+        <Badge type="badge-with-plate" />
+        <Badge type="badge-with-plate" bold />
+        <Badge type="badge-with-plate" bronze />
+        <Badge type="badge-with-plate" silver />
+        <Badge type="badge-with-plate" gold />
+        <Badge type="badge-with-plate" elite />
       </Card>
     </div>
   )

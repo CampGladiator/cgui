@@ -115,7 +115,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "campgladiator.cgui/components/atoms/button@0.0.9": {
+    "campgladiator.cgui/components/atoms/button@0.0.10": {
         "files": [
             {
                 "name": "Button.js",
@@ -293,7 +293,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "campgladiator.cgui/components/atoms/fieldset@0.0.5": {
+    "campgladiator.cgui/components/atoms/fieldset@0.0.6": {
         "files": [
             {
                 "name": "Fieldset.js",
@@ -321,7 +321,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "campgladiator.cgui/components/atoms/form-label@0.0.5": {
+    "campgladiator.cgui/components/atoms/form-label@0.0.6": {
         "files": [
             {
                 "name": "FormLabel.js",
@@ -377,12 +377,17 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "campgladiator.cgui/components/atoms/heading@0.0.1": {
+    "campgladiator.cgui/components/atoms/heading@0.0.2": {
         "files": [
             {
                 "relativePath": "src/components/atoms/Heading/Heading.js",
                 "test": false,
                 "name": "Heading.js"
+            },
+            {
+                "relativePath": "src/components/atoms/Heading/Heading.md",
+                "test": false,
+                "name": "Heading.md"
             },
             {
                 "relativePath": "src/components/atoms/Heading/Heading.scss",
@@ -461,7 +466,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "campgladiator.cgui/components/atoms/input@0.0.6": {
+    "campgladiator.cgui/components/atoms/input@0.0.7": {
         "files": [
             {
                 "name": "Input.js",
@@ -545,7 +550,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "campgladiator.cgui/components/atoms/progress-bar@0.0.3": {
+    "campgladiator.cgui/components/atoms/progress-bar@0.0.4": {
         "files": [
             {
                 "relativePath": "src/components/atoms/ProgressBar/ProgressBar.js",
@@ -634,7 +639,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "campgladiator.cgui/components/molecules/button-group@0.0.10": {
+    "campgladiator.cgui/components/molecules/button-group@0.0.11": {
         "files": [
             {
                 "name": "ButtonGroup.js",
@@ -662,7 +667,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "campgladiator.cgui/components/molecules/radio-group@0.0.5": {
+    "campgladiator.cgui/components/molecules/radio-group@0.0.6": {
         "files": [
             {
                 "name": "RadioGroup.js",

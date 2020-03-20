@@ -16,7 +16,7 @@ $badge-cdn-path: 'https://s3.amazonaws.com/cgcdn/global-ui/images/badges/';
   height: 100px;
 }
 
-.badge {
+.cg-badge {
   @extend %badge-shared;
   &--plain {
     @include add-badge-background-image('badge-placeholder.png');
@@ -38,7 +38,7 @@ $badge-cdn-path: 'https://s3.amazonaws.com/cgcdn/global-ui/images/badges/';
   }
 }
 
-.plate {
+.cg-plate {
   @extend %badge-shared;
   &--plain {
     @include add-badge-background-image('plate-placeholder.png');
@@ -60,7 +60,7 @@ $badge-cdn-path: 'https://s3.amazonaws.com/cgcdn/global-ui/images/badges/';
   }
 }
 
-.badge-with-plate {
+.cg-badge-with-plate {
   @extend %badge-shared;
   &--plain {
     @include add-badge-background-image('badge-with-plate-placeholder.png');

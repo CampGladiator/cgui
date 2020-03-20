@@ -16,7 +16,7 @@ const Badge = ({
 }) => (
   <div
     className={mods(
-      type,
+      'cg-' + type,
       { plain, bold, bronze, silver, gold, elite },
       className,
     )}
@@ -26,7 +26,6 @@ const Badge = ({
 const Type = PropTypes.oneOf(['badge', 'plate', 'badge-with-plate'])
 
 Badge.defaultProps = {
-  className: '',
   plain: true,
   bold: false,
   bronze: false,

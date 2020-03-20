@@ -18,6 +18,7 @@ import Avatar from './components/atoms/Avatar'
 import ProgressBar from './components/atoms/ProgressBar'
 import Badge from './components/atoms/Badge'
 import CreditCard from './components/atoms/CreditCard'
+import Heading from './components/atoms/Heading'
 import RadioGroup from './components/molecules/RadioGroup'
 import ButtonGroup from './components/molecules/ButtonGroup'
 import Callout from './components/atoms/Callout'
@@ -329,7 +330,7 @@ function App() {
         <Logo.Full style={{ padding: '30px' }} mono />
       </Card>
 
-      <Card style={{ padding: '30px' }}>
+      <Card style={{ padding: '20px' }}>
         <Avatar style={{ margin: '20px' }} />
         <Avatar
           alt="me"
@@ -387,6 +388,54 @@ function App() {
         >
           <Callout style={{ width: '600px' }}>HYLQ6893</Callout>
         </div>
+      </Card>
+
+      <Card style={{ padding: '20px' }}>
+        <Heading>Heading 1</Heading>
+        <Heading type="h2" font="primary" secondary>
+          Heading 2
+        </Heading>
+        <Heading type="h3" font="primary" dark>
+          Heading 3
+        </Heading>
+        <Heading type="h4" font="primary" gray>
+          Heading 4
+        </Heading>
+        <Heading
+          type="h5"
+          font="primary"
+          white
+          style={{ backgroundColor: 'black' }}
+        >
+          Heading 5
+        </Heading>
+        <Heading type="h6" font="primary">
+          Heading 6
+        </Heading>
+
+        <hr />
+
+        <Heading font="display">Heading 1</Heading>
+        <Heading type="h2" font="display" secondary>
+          Heading 2
+        </Heading>
+        <Heading type="h3" font="display" dark>
+          Heading 3
+        </Heading>
+        <Heading type="h4" font="display" gray>
+          Heading 4
+        </Heading>
+        <Heading
+          type="h5"
+          font="display"
+          white
+          style={{ backgroundColor: 'black' }}
+        >
+          Heading 5
+        </Heading>
+        <Heading type="h6" font="display">
+          Heading 6
+        </Heading>
       </Card>
     </div>
   )

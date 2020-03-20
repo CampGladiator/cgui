@@ -1,4 +1,5 @@
 # Overview
+[![bit components](https://img.shields.io/badge/dynamic/json.svg?color=6e3991&label=bit%20components&query=payload.totalComponents&url=https%3A%2F%2Fapi.bit.dev%2Fscope%2Fcampgladiator%2Fcgui)](https://bit.dev/campgladiator/cgui)
 
 Welcome to the CGUI react library, with component syncing to bit.dev.
 

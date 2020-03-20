@@ -42,3 +42,9 @@ $responsive-variants: (
     }
   }
 }
+
+@mixin for-phone-only {
+  @include breakpoint(phone-only) {
+    @content;
+  }
+}

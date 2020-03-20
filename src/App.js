@@ -15,6 +15,7 @@ import ImageLabel from './components/atoms/ImageLabel'
 import SetSelector from './components/atoms/SetSelector'
 import Logo from './components/atoms/Logo'
 import Avatar from './components/atoms/Avatar'
+import ProgressBar from './components/atoms/ProgressBar'
 import RadioGroup from './components/molecules/RadioGroup'
 import ButtonGroup from './components/molecules/ButtonGroup'
 
@@ -270,6 +271,44 @@ function App() {
         <SetSelector>
           <Icon name="check" size={20} />
         </SetSelector>
+      </Card>
+
+      <Card style={{ padding: '20px' }}>
+        <div
+          style={{
+            margin: '20px',
+          }}
+        >
+          <ProgressBar percentCompleted={75} />
+        </div>
+        <div
+          style={{
+            margin: '20px',
+          }}
+        >
+          <ProgressBar percentCompleted={50} />
+        </div>
+        <div
+          style={{
+            margin: '20px',
+          }}
+        >
+          <ProgressBar percentCompleted={25} progressColor="#263746" />
+        </div>
+        <div
+          style={{
+            margin: '20px',
+          }}
+        >
+          <ProgressBar percentCompleted={80} progressColor="#263746" />
+        </div>
+        <div
+          style={{
+            margin: '20px',
+          }}
+        >
+          <ProgressBar percentCompleted={100} progressColor="#263746" />
+        </div>
       </Card>
 
       <Card style={{ padding: '20px', backgroundColor: '#bbb' }}>

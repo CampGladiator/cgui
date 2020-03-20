@@ -41,7 +41,9 @@ describe('<Button />', () => {
   })
 
   it('renders a loader when in loading state', () => {
-    expect(shallow(<Button loading />).contains(<Loader />)).toBe(true)
+    expect(shallow(<Button loading />).contains(<Loader white={false} />)).toBe(
+      true,
+    )
   })
 
   it('renders a white loader the button is solid and loading', () => {

@@ -48,6 +48,8 @@ Heading.propTypes = {
   dark: PropTypes.bool,
   gray: PropTypes.bool,
   white: PropTypes.bool,
+  className: PropTypes.string,
+  children: PropTypes.node,
 }
 
 export default Heading

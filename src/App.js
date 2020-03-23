@@ -17,6 +17,7 @@ import Logo from './components/atoms/Logo'
 import Avatar from './components/atoms/Avatar'
 import ProgressBar from './components/atoms/ProgressBar'
 import Badge from './components/atoms/Badge'
+import CreditCard from './components/atoms/CreditCard'
 import RadioGroup from './components/molecules/RadioGroup'
 import ButtonGroup from './components/molecules/ButtonGroup'
 
@@ -356,6 +357,18 @@ function App() {
         <Badge type="badge-with-plate" silver />
         <Badge type="badge-with-plate" gold />
         <Badge type="badge-with-plate" elite />
+      </Card>
+      <Card style={{ padding: '20px', display: 'flex' }}>
+        <CreditCard style={{ margin: '5px' }} />
+        <CreditCard amex style={{ margin: '5px' }} />
+        <CreditCard diners style={{ margin: '5px' }} />
+        <CreditCard discover style={{ margin: '5px' }} />
+        <CreditCard jcb style={{ margin: '5px' }} />
+        <CreditCard laser style={{ margin: '5px' }} />
+        <CreditCard maestro style={{ margin: '5px' }} />
+        <CreditCard mc style={{ margin: '5px' }} />
+        <CreditCard visaelec style={{ margin: '5px' }} />
+        <CreditCard visa style={{ margin: '5px' }} />
       </Card>
     </div>
   )

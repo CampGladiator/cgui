@@ -20,6 +20,7 @@ import Badge from './components/atoms/Badge'
 import CreditCard from './components/atoms/CreditCard'
 import RadioGroup from './components/molecules/RadioGroup'
 import ButtonGroup from './components/molecules/ButtonGroup'
+import Callout from './components/atoms/Callout'
 
 const toggleGrowl = () =>
   document.getElementById('growlInfo') &&
@@ -369,6 +370,23 @@ function App() {
         <CreditCard mc style={{ margin: '5px' }} />
         <CreditCard visaelec style={{ margin: '5px' }} />
         <CreditCard visa style={{ margin: '5px' }} />
+      </Card>
+      <Card style={{ padding: '30px' }}>
+        <div
+          style={{
+            margin: '20px',
+          }}
+        >
+          <Callout style={{ width: '200px' }}></Callout>
+        </div>
+
+        <div
+          style={{
+            margin: '20px',
+          }}
+        >
+          <Callout style={{ width: '600px' }}>HYLQ6893</Callout>
+        </div>
       </Card>
     </div>
   )

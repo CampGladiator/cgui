@@ -15,7 +15,11 @@ describe('<Callout />', () => {
 
   it('displays the content', () => {
     expect(
-      shallow(<Callout content="HYLQ6893" />)
+      shallow(
+        <Callout>
+          <div>HYLQ6893</div>
+        </Callout>,
+      )
         .find('div')
         .text(),
     ).toBe('HYLQ6893')

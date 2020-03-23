@@ -371,6 +371,25 @@ function App() {
         <CreditCard visaelec style={{ margin: '5px' }} />
         <CreditCard visa style={{ margin: '5px' }} />
       </Card>
+      <Card style={{ padding: '30px' }}>
+        <div
+          style={{
+            margin: '20px',
+          }}
+        >
+          <Callout style={{ width: '200px' }}></Callout>
+        </div>
+
+        <div
+          style={{
+            margin: '20px',
+          }}
+        >
+          <Callout style={{ width: '600px' }}>
+            <div>HYLQ6893</div>
+          </Callout>
+        </div>
+      </Card>
     </div>
   )
 }

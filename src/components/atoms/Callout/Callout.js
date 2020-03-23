@@ -1,23 +1,17 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import mods from '../../../utilities/mods'
 import './Callout.scss'
 
-const Callout = ({ className, style, content }) => (
-  <article className={`cg-callout ${className}`} style={{ ...style }}>
-    <div>{content}</div>
+const Callout = ({ className, children, ...props }) => (
+  <article className={mods('cg-callout', {}, className)} {...props}>
+    {children}
   </article>
 )
 
-Callout.defaultProps = {
-  className: '',
-  style: {},
-  content: '',
-}
-
 Callout.propTypes = {
   className: PropTypes.string,
-  style: PropTypes.object,
-  content: PropTypes.string,
+  children: PropTypes.node,
 }
 
 export default Callout

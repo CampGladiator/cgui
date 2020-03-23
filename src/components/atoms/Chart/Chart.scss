@@ -7,7 +7,7 @@
   box-shadow: 0px 1px 3px $grey-tint;
   text-align: center;
   font-family: $font-primary;
-  color: #ffffff;
+  color: $white;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -16,7 +16,7 @@
 
 .cg-counter {
   @extend %counter-shared;
-  border: 10px solid #ffffff;
+  border: 10px solid $white;
 
   &--large {
     font-size: 64px;

@@ -19,9 +19,10 @@ import ProgressBar from './components/atoms/ProgressBar'
 import Badge from './components/atoms/Badge'
 import CreditCard from './components/atoms/CreditCard'
 import Heading from './components/atoms/Heading'
+import Callout from './components/atoms/Callout'
 import RadioGroup from './components/molecules/RadioGroup'
 import ButtonGroup from './components/molecules/ButtonGroup'
-import Callout from './components/atoms/Callout'
+import Steps from './components/molecules/Steps'
 
 const toggleGrowl = () =>
   document.getElementById('growlInfo') &&
@@ -436,6 +437,27 @@ function App() {
         <Heading type="h6" font="display">
           Heading 6
         </Heading>
+      </Card>
+      <Card style={{ padding: '20px' }}>
+        <Steps steps={['Step One', 'Step Two', 'Step Three', 'Step Four']} />
+        <Steps
+          currentSelectedStep={2}
+          steps={['Step One', 'Step Two', 'Step Three', 'Step Four']}
+        />
+        <Steps
+          currentSelectedStep={3}
+          steps={['Step One', 'Step Two', 'Step Three', 'Step Four']}
+        />
+        <Steps
+          currentSelectedStep={2}
+          steps={[
+            'Step One',
+            'Step Two',
+            'Step Three',
+            'Step Four',
+            'Step Five',
+          ]}
+        />
       </Card>
     </div>
   )

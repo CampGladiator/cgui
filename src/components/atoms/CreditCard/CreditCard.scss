@@ -1,0 +1,51 @@
+@import '../../../assets/styles/mixins.scss';
+
+$credit-card-cdn-path: 'https://cgcdn.s3.amazonaws.com/cgui/images/credit-cards/';
+
+@mixin add-credit-card-background-image($name) {
+  @include add-background-image($credit-card-cdn-path, $name);
+}
+
+%cg-credit-card-shared {
+  display: block;
+  outline: 0;
+  background-repeat: no-repeat;
+  background-position: 0;
+  background-size: contain;
+  width: 100px;
+  height: 100px;
+}
+
+.cg-credit-card {
+  @extend %cg-credit-card-shared;
+  &--placeholder {
+    @include add-credit-card-background-image('placeholder.png');
+  }
+  &--amex {
+    @include add-credit-card-background-image('american-express.png');
+  }
+  &--diners {
+    @include add-credit-card-background-image('diners.png');
+  }
+  &--discover {
+    @include add-credit-card-background-image('discover.png');
+  }
+  &--jcb {
+    @include add-credit-card-background-image('jcb.png');
+  }
+  &--laser {
+    @include add-credit-card-background-image('laser.png');
+  }
+  &--maestro {
+    @include add-credit-card-background-image('maestro.png');
+  }
+  &--mc {
+    @include add-credit-card-background-image('master-card.png');
+  }
+  &--visaelec {
+    @include add-credit-card-background-image('visa-electron.png');
+  }
+  &--visa {
+    @include add-credit-card-background-image('visa.png');
+  }
+}

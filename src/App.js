@@ -385,9 +385,7 @@ function App() {
             margin: '20px',
           }}
         >
-          <Callout style={{ width: '600px' }}>
-            <div>HYLQ6893</div>
-          </Callout>
+          <Callout style={{ width: '600px' }}>HYLQ6893</Callout>
         </div>
       </Card>
     </div>

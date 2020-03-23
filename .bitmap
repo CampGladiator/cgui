@@ -143,6 +143,39 @@
         "origin": "AUTHORED",
         "exported": true
     },
+    "campgladiator.cgui/components/atoms/callout@0.0.1": {
+        "files": [
+            {
+                "relativePath": "src/components/atoms/Callout/Callout.js",
+                "test": false,
+                "name": "Callout.js"
+            },
+            {
+                "relativePath": "src/components/atoms/Callout/Callout.md",
+                "test": false,
+                "name": "Callout.md"
+            },
+            {
+                "relativePath": "src/components/atoms/Callout/Callout.scss",
+                "test": false,
+                "name": "Callout.scss"
+            },
+            {
+                "relativePath": "src/components/atoms/Callout/Callout.spec.js",
+                "test": true,
+                "name": "Callout.spec.js"
+            },
+            {
+                "relativePath": "src/components/atoms/Callout/index.js",
+                "test": false,
+                "name": "index.js"
+            }
+        ],
+        "mainFile": "src/components/atoms/Callout/index.js",
+        "trackDir": "src/components/atoms/Callout",
+        "origin": "AUTHORED",
+        "exported": true
+    },
     "campgladiator.cgui/components/atoms/card@0.0.2": {
         "files": [
             {

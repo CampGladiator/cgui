@@ -20,6 +20,7 @@ import Badge from './components/atoms/Badge'
 import CreditCard from './components/atoms/CreditCard'
 import RadioGroup from './components/molecules/RadioGroup'
 import ButtonGroup from './components/molecules/ButtonGroup'
+import Callout from './components/atoms/Callout'
 
 const toggleGrowl = () =>
   document.getElementById('growlInfo') &&

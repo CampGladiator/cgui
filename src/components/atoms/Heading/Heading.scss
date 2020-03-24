@@ -1,0 +1,94 @@
+@import '../../../assets/styles/fonts.scss';
+@import '../../../assets/styles/variables.scss';
+
+.cg-heading {
+  line-height: 1;
+  text-transform: uppercase;
+  margin: 0 0 1rem 0;
+  line-height: 1;
+
+  &__primary {
+    font-family: $font-primary;
+    font-weight: 700;
+    letter-spacing: 2px;
+
+    &--h1 {
+      font-size: $h1-primary-size;
+    }
+
+    &--h2 {
+      font-size: $h2-primary-size;
+    }
+
+    &--h3 {
+      font-size: $h3-primary-size;
+    }
+
+    &--h4 {
+      font-size: $h4-primary-size;
+    }
+
+    &--h5 {
+      font-size: $h5-primary-size;
+    }
+
+    &--h6 {
+      font-size: $h6-primary-size;
+    }
+  }
+
+  &__display {
+    font-family: $font-display;
+    font-weight: 900;
+
+    &--h1 {
+      font-size: $h1-display-size;
+      letter-spacing: 2px;
+    }
+
+    &--h2 {
+      font-size: $h2-display-size;
+      letter-spacing: 2px;
+    }
+
+    &--h3 {
+      font-size: $h3-display-size;
+      letter-spacing: 1px;
+    }
+
+    &--h4 {
+      font-size: $h4-display-size;
+      letter-spacing: 0.5px;
+    }
+
+    &--h5 {
+      font-size: $h5-display-size;
+      letter-spacing: 0.5px;
+    }
+
+    &--h6 {
+      font-size: $h6-display-size;
+      letter-spacing: 0px;
+    }
+  }
+
+  &--primary {
+    color: $gladiator;
+  }
+
+  &--secondary {
+    color: $navy;
+  }
+
+  &--dark {
+    color: $dark-gray;
+  }
+
+  &--gray {
+    color: $medium-gray;
+  }
+
+  &--white {
+    color: white;
+  }
+}

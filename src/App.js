@@ -25,6 +25,7 @@ import ButtonGroup from './components/molecules/ButtonGroup'
 import Steps from './components/molecules/Steps'
 import Atoms from './examples/atoms'
 import Molecules from './examples/molecules'
+import FlashMessage from './components/molecules/FlashMessage'
 
 const toggleGrowl = () =>
   document.getElementById('growlInfo') &&
@@ -463,6 +464,13 @@ function App() {
       </Card>
       <Atoms />
       <Molecules />
+      <Card style={{ padding: '30px' }}>
+        <FlashMessage show="true" count={3} text="Link alert message goes here">
+          <Button outline white>
+            action
+          </Button>
+        </FlashMessage>
+      </Card>
     </div>
   )
 }

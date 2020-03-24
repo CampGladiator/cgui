@@ -1,0 +1,50 @@
+@import '../../../assets/styles/variables';
+@import '../../../assets/styles/breakpoints';
+
+.cg-flash-message {
+  display: flex;
+  align-items: center;
+  padding: 16px 20px;
+  min-height: 60px;
+  background: $gladiator;
+  color: white;
+
+  @include for-phone-only {
+    align-items: flex-start;
+    margin: 20px 0 0 0;
+  }
+
+  &__content > * + * {
+    margin: 0 0 0 20px;
+  }
+
+  &__badge {
+    border-radius: 100px;
+    background-color: white;
+    color: $gladiator;
+    height: 35px;
+    min-width: 35px;
+    line-height: 35px;
+    font-size: 12px;
+    text-align: center;
+    margin-right: 20px;
+
+    @include for-phone-only {
+      height: 30px;
+      min-width: 30px;
+      line-height: 30px;
+    }
+  }
+
+  &__content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-right: auto;
+
+    @include for-phone-only {
+      font-size: 12px;
+    }
+  }
+}

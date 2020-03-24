@@ -1,7 +1,7 @@
 @import '../../../assets/styles/breakpoints';
 @import '../../../assets/styles/variables';
 
-.steps {
+.cg-steps {
   display: flex;
   margin: auto;
   width: 75%;
@@ -15,7 +15,7 @@
   }
 }
 
-.step {
+.cg-step {
   display: flex;
   align-items: center;
   opacity: 0.4;
@@ -37,7 +37,7 @@
     box-sizing: border-box;
     min-height: 35px;
     min-width: 35px;
-    color: $white;
+    color: white;
     font-size: 12px;
     font-weight: bold;
     text-align: center;

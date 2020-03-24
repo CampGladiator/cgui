@@ -13,14 +13,14 @@ const StepsItem = memo(({ steps = [], currentSelectedStep = 0 }) =>
     }
     let additionalClassName = ''
     if (currentSelectedStep === index) {
-      additionalClassName = 'step--current'
+      additionalClassName = 'cg-step--current'
     } else if (index > currentSelectedStep) {
-      additionalClassName = 'step--disabled'
+      additionalClassName = 'cg-step--disabled'
     }
     return (
-      <li key={`step~${index}`} className={`step ${additionalClassName}`}>
-        <span className="step__bullet">{index + 1}</span>
-        <h3 className="step__text">{label}</h3>
+      <li key={`step~${index}`} className={`cg-step ${additionalClassName}`}>
+        <span className="cg-step__bullet">{index + 1}</span>
+        <h3 className="cg-step__text">{label}</h3>
       </li>
     )
   }),
@@ -30,7 +30,7 @@ const Steps = memo(
   ({ className, steps = [], currentSelectedStep = 0, ...props }) => {
     if (steps.length > 0) {
       return (
-        <ul className={mods('steps', {}, className)}>
+        <ul className={mods('cg-steps', {}, className)}>
           <StepsItem
             steps={steps}
             currentSelectedStep={currentSelectedStep}

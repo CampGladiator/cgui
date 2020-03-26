@@ -1,9 +1,9 @@
 import React from 'react'
-import { shallow, mount } from 'enzyme'
+import { shallow } from 'enzyme'
 import sinon from 'sinon'
 import SetSelectorGroup from './SetSelectorGroup'
 
-let selectorRadioOptions = [
+let selectorOptions = [
   {
     label: 'xs',
     value: 'xs',
@@ -18,17 +18,65 @@ let selectorRadioOptions = [
   },
 ]
 let defaultRadioVal = ['x']
+let defaultCheckboxVal = ['x', 'xs']
 
 describe('<SetSelectorGroup />', () => {
-  it('renders without crashing', () => {
+  it('renders radio set selector', () => {
+    const handleOnChange = sinon.spy()
+    const renderedComponent = shallow(
+      <SetSelectorGroup
+        options={selectorOptions}
+        type="radio"
+        defaultSelected={defaultRadioVal}
+        onChange={handleOnChange}
+      ></SetSelectorGroup>,
+    )
+    expect(() => renderedComponent).not.toThrow()
+  })
+
+  it('renders checkbox options set selector', () => {
+    const handleOnChange = sinon.spy()
     expect(() =>
       shallow(
         <SetSelectorGroup
-          options={selectorRadioOptions}
-          type="radio"
-          defaultSelected={defaultRadioVal}
+          options={selectorOptions}
+          type="checkbox"
+          defaultSelected={defaultCheckboxVal}
+          onChange={handleOnChange}
         ></SetSelectorGroup>,
       ),
     ).not.toThrow()
+  })
+
+  it('renders without any type', () => {
+    const handleOnChange = sinon.spy()
+    const renderedComponent = shallow(
+      <SetSelectorGroup
+        options={selectorOptions}
+        type="radio"
+        defaultSelected={defaultRadioVal}
+        onChange={handleOnChange}
+      ></SetSelectorGroup>,
+    )
+      .find('SetSelector')
+      .at(1)
+    expect(renderedComponent.prop('type')).toBe('radio')
+    expect(renderedComponent.prop('selected')).toBe(true)
+  })
+
+  it('renders ', () => {
+    const handleOnChange = sinon.spy()
+    const renderedComponent = shallow(
+      <SetSelectorGroup
+        options={selectorOptions}
+        type="checkbox"
+        defaultSelected={defaultCheckboxVal}
+        onChange={handleOnChange}
+      ></SetSelectorGroup>,
+    )
+      .find('SetSelector')
+      .at(0)
+    expect(renderedComponent.prop('type')).toBe('checkbox')
+    expect(renderedComponent.prop('selected')).toBe(true)
   })
 })

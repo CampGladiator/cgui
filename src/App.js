@@ -78,27 +78,27 @@ let selectorRadioOptions = [
 
 let selectorCheckboxOptions = [
   {
-    label: 'Mon',
+    label: 'M',
     value: 'm',
   },
   {
-    label: 'Tue',
+    label: 'T',
     value: 't',
   },
   {
-    label: 'Wed',
+    label: 'W',
     value: 'w',
   },
   {
-    label: 'Thur',
+    label: 'Th',
     value: 'th',
   },
   {
-    label: 'Fri',
+    label: 'F',
     value: 'f',
   },
   {
-    label: 'Sat',
+    label: 'S',
     value: 's',
   },
 ]

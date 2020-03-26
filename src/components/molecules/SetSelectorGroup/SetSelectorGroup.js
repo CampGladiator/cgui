@@ -20,7 +20,7 @@ const SetSelectorGroup = ({
 
   useEffect(() => {
     onChange(selectedList)
-  }, [selectedList, setSelectedList])
+  }, [selectedList, setSelectedList, onChange])
   const updateList = targetVal => {
     switch (type) {
       case 'radio':
@@ -54,7 +54,7 @@ const SetSelectorGroup = ({
             label={option.label}
             type={type}
           >
-            {option.value}
+            {option.label}
           </SetSelector>
         </span>
       ))}

@@ -23,6 +23,8 @@ import Callout from './components/atoms/Callout'
 import RadioGroup from './components/molecules/RadioGroup'
 import ButtonGroup from './components/molecules/ButtonGroup'
 import Steps from './components/molecules/Steps'
+import Atoms from './examples/atoms'
+import Molecules from './examples/molecules'
 
 const toggleGrowl = () =>
   document.getElementById('growlInfo') &&
@@ -459,6 +461,8 @@ function App() {
           ]}
         />
       </Card>
+      <Atoms />
+      <Molecules />
     </div>
   )
 }

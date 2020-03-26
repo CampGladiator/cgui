@@ -1,0 +1,3 @@
+## Modal
+
+Modals are highly disruptive overlays helpful for forcing the user’s attention to a certain context.Modals can allow manual closing by the user, or this feature can be removed to prevent the user from interacting with other parts of the interface without first completing the action(s) provided by the modal. While modals are powerful, they can be quite disruptive to the user and should therefore be used sparingly and with the user-experience in mind. Examples of common modal content include: showing a video, requesting the user confirm their address, and requiring the user to accept terms and conditions before continuing. Only one modal should be active at a time.

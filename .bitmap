@@ -733,6 +733,39 @@
         "origin": "AUTHORED",
         "exported": true
     },
+    "campgladiator.cgui/components/molecules/modal@0.0.2": {
+        "files": [
+            {
+                "relativePath": "src/components/molecules/Modal/Modal.js",
+                "test": false,
+                "name": "Modal.js"
+            },
+            {
+                "relativePath": "src/components/molecules/Modal/Modal.md",
+                "test": false,
+                "name": "Modal.md"
+            },
+            {
+                "relativePath": "src/components/molecules/Modal/Modal.scss",
+                "test": false,
+                "name": "Modal.scss"
+            },
+            {
+                "relativePath": "src/components/molecules/Modal/Modal.spec.js",
+                "test": true,
+                "name": "Modal.spec.js"
+            },
+            {
+                "relativePath": "src/components/molecules/Modal/index.js",
+                "test": false,
+                "name": "index.js"
+            }
+        ],
+        "mainFile": "src/components/molecules/Modal/index.js",
+        "trackDir": "src/components/molecules/Modal",
+        "origin": "AUTHORED",
+        "exported": true
+    },
     "campgladiator.cgui/components/molecules/radio-group@0.0.10": {
         "files": [
             {

@@ -583,7 +583,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "campgladiator.cgui/components/atoms/set-selector@0.0.4": {
+    "campgladiator.cgui/components/atoms/set-selector@0.0.5": {
         "files": [
             {
                 "relativePath": "src/components/atoms/SetSelector/SetSelector.js",
@@ -794,7 +794,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "campgladiator.cgui/components/molecules/set-selector-group@0.0.2": {
+    "campgladiator.cgui/components/molecules/set-selector-group@0.0.3": {
         "files": [
             {
                 "relativePath": "src/components/molecules/SetSelectorGroup/SetSelectorGroup.js",

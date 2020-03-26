@@ -700,6 +700,39 @@
         "origin": "AUTHORED",
         "exported": true
     },
+    "campgladiator.cgui/components/molecules/flash-message@0.0.3": {
+        "files": [
+            {
+                "relativePath": "src/components/molecules/FlashMessage/FlashMessage.js",
+                "test": false,
+                "name": "FlashMessage.js"
+            },
+            {
+                "relativePath": "src/components/molecules/FlashMessage/FlashMessage.md",
+                "test": false,
+                "name": "FlashMessage.md"
+            },
+            {
+                "relativePath": "src/components/molecules/FlashMessage/FlashMessage.scss",
+                "test": false,
+                "name": "FlashMessage.scss"
+            },
+            {
+                "relativePath": "src/components/molecules/FlashMessage/FlashMessage.spec.js",
+                "test": true,
+                "name": "FlashMessage.spec.js"
+            },
+            {
+                "relativePath": "src/components/molecules/FlashMessage/index.js",
+                "test": false,
+                "name": "index.js"
+            }
+        ],
+        "mainFile": "src/components/molecules/FlashMessage/index.js",
+        "trackDir": "src/components/molecules/FlashMessage",
+        "origin": "AUTHORED",
+        "exported": true
+    },
     "campgladiator.cgui/components/molecules/radio-group@0.0.10": {
         "files": [
             {

@@ -21,6 +21,7 @@ import CreditCard from './components/atoms/CreditCard'
 import Heading from './components/atoms/Heading'
 import Callout from './components/atoms/Callout'
 import RadioGroup from './components/molecules/RadioGroup'
+import SetSelectorGroup from './components/molecules/SetSelectorGroup'
 import ButtonGroup from './components/molecules/ButtonGroup'
 import Steps from './components/molecules/Steps'
 import Atoms from './examples/atoms'
@@ -42,6 +43,9 @@ const testRightClick = () => console.log('testRightClick:', 'right click')
 
 const onButtonClick = e => console.log('onButtonClick:', e.target)
 
+const handleOnSetSelectorChange = selected =>
+  console.log('handleOnSetSelectorChange:', selected)
+
 const radioOptions = [
   {
     label: 'option 1',
@@ -56,6 +60,51 @@ const radioOptions = [
     value: 'id3',
   },
 ]
+
+let selectorRadioOptions = [
+  {
+    label: 'xs',
+    value: 'xs',
+  },
+  {
+    label: 'x',
+    value: 'x',
+  },
+  {
+    label: 'm',
+    value: 'm',
+  },
+]
+
+let selectorCheckboxOptions = [
+  {
+    label: 'Mon',
+    value: 'm',
+  },
+  {
+    label: 'Tue',
+    value: 't',
+  },
+  {
+    label: 'Wed',
+    value: 'w',
+  },
+  {
+    label: 'Thur',
+    value: 'th',
+  },
+  {
+    label: 'Fri',
+    value: 'f',
+  },
+  {
+    label: 'Sat',
+    value: 's',
+  },
+]
+
+const defaultRadioVal = ['x']
+const defaultCheckboxVal = ['m', 'w']
 
 function App() {
   const [switch1Status, setSwitch1Status] = useState(false)
@@ -194,6 +243,24 @@ function App() {
           options={radioOptions}
           onChange={handleOnRadioChange}
         ></RadioGroup>
+      </Card>
+
+      <Card style={{ padding: '20px' }}>
+        <h3 style={{ padding: '20px' }}>SetSelector of type Radio</h3>
+        <SetSelectorGroup
+          options={selectorRadioOptions}
+          type="radio"
+          defaultSelected={defaultRadioVal}
+          onChange={handleOnSetSelectorChange}
+        ></SetSelectorGroup>
+
+        <h3 style={{ padding: '20px' }}>SetSelector of type Checkbox</h3>
+        <SetSelectorGroup
+          options={selectorCheckboxOptions}
+          type="checkbox"
+          defaultSelected={defaultCheckboxVal}
+          onChange={handleOnSetSelectorChange}
+        ></SetSelectorGroup>
       </Card>
 
       <Card style={{ padding: '20px' }}>

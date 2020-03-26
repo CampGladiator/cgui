@@ -1,11 +1,29 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import PropTypes from 'prop-types'
 import './SetSelector.scss'
 import mods from '../../../utilities/mods'
 
-const SetSelector = ({ selected, className, children, ...props }) => {
+const SetSelector = ({
+  selected,
+  className,
+  children,
+  type,
+  onSelect,
+  ...props
+}) => {
   const [select, setSelect] = useState(selected)
 
+  useEffect(() => {
+    setSelect(selected)
+  }, [selected])
+
+  const handleOnClick = e => {
+    if (type !== undefined) {
+      onSelect(e)
+    } else {
+      setSelect(!select)
+    }
+  }
   return (
     <button
       className={mods(
@@ -15,22 +33,21 @@ const SetSelector = ({ selected, className, children, ...props }) => {
         className,
       )}
       {...props}
-      onClick={() => setSelect(!select)}
+      onClick={e => {
+        handleOnClick(e)
+      }}
     >
       {children}
     </button>
   )
 }
 
-SetSelector.defaultProps = {
-  className: '',
-  selected: false,
-}
-
 SetSelector.propTypes = {
   selected: PropTypes.bool,
   className: PropTypes.string,
   children: PropTypes.node,
+  type: PropTypes.string,
+  onSelect: PropTypes.func,
 }
 
 export default SetSelector

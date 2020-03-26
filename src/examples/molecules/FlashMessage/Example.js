@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 import FlashMessage from '../../../components/molecules/FlashMessage'
 import Card from '../../../components/atoms/Card'
 import Button from '../../../components/atoms/Button'
@@ -15,8 +15,4 @@ const FlashMessageExample = () => {
   )
 }
 
-export default () => (
-  <Fragment>
-    <FlashMessageExample />
-  </Fragment>
-)
+export default () => <FlashMessageExample />

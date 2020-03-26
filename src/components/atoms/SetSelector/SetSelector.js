@@ -42,6 +42,10 @@ const SetSelector = ({
   )
 }
 
+SetSelector.defaultProps = {
+  selected: false,
+}
+
 SetSelector.propTypes = {
   selected: PropTypes.bool,
   className: PropTypes.string,

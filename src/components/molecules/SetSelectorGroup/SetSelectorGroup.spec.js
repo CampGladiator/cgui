@@ -3,7 +3,7 @@ import { shallow } from 'enzyme'
 import sinon from 'sinon'
 import SetSelectorGroup from './SetSelectorGroup'
 
-let selectorOptions = [
+const selectorOptions = [
   {
     label: 'xs',
     value: 'xs',
@@ -17,8 +17,8 @@ let selectorOptions = [
     value: 'm',
   },
 ]
-let defaultRadioVal = ['x']
-let defaultCheckboxVal = ['x', 'xs']
+const defaultRadioVal = ['x']
+const defaultCheckboxVal = ['x', 'xs']
 
 describe('<SetSelectorGroup />', () => {
   it('renders radio set selector', () => {
@@ -48,7 +48,7 @@ describe('<SetSelectorGroup />', () => {
     ).not.toThrow()
   })
 
-  it('renders without any type', () => {
+  it('validates type radio and selected to be true', () => {
     const handleOnChange = sinon.spy()
     const renderedComponent = shallow(
       <SetSelectorGroup
@@ -64,7 +64,7 @@ describe('<SetSelectorGroup />', () => {
     expect(renderedComponent.prop('selected')).toBe(true)
   })
 
-  it('renders ', () => {
+  it('validates type checkbox and selected to be true', () => {
     const handleOnChange = sinon.spy()
     const renderedComponent = shallow(
       <SetSelectorGroup

@@ -7,39 +7,6 @@
   margin: 20px;
 
   &__item {
-    display: inline-block;
-    font-family: $font-primary;
-    line-height: 1;
-    border: 2px solid $navy;
-    border-radius: 50%;
-    color: $navy;
-    font-size: 14px;
-    font-weight: bold;
     margin: 0 10px;
-    min-width: 46px;
-    height: 46px;
-    text-transform: uppercase;
-    transition: 0.15s linear all;
-    cursor: pointer;
-    outline: 0;
-
-    &:hover {
-      opacity: 0.8;
-    }
-
-    & + & {
-      margin-left: 8px;
-    }
-
-    &--selected {
-      background: $navy;
-      color: white;
-    }
-
-    &[disabled] {
-      color: $light-gray;
-      border-color: $light-gray;
-      cursor: default;
-    }
   }
 }

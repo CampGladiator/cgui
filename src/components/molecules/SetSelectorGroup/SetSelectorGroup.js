@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import Fieldset from '../../atoms/Fieldset'
 import SetSelector from '../../atoms/SetSelector'
 import './SetSelectorGroup.scss'
+import mods from '../../../utilities/mods'
 
 const SetSelectorGroup = ({
   defaultSelected,
@@ -41,7 +42,7 @@ const SetSelectorGroup = ({
     }
   }
   return (
-    <Fieldset className={`cg-set-selector ${className}`}>
+    <Fieldset className={mods('cg-set-selector', {}, className)}>
       {selectorOptions.map(option => (
         <span key={option.value}>
           <SetSelector

@@ -1,1 +1,1 @@
-export { default } from './SetSelectorGroup.js'
+export { default } from './SetSelectorGroup'

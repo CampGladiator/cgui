@@ -1,0 +1,112 @@
+@import '../../../assets/styles/fonts.scss';
+@import '../../../assets/styles/variables.scss';
+
+$tooltip-color: #2a2a2a;
+$tooltip-zIndex: 1;
+
+%cg-tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+%cg-tooltip-content-before {
+  border-left: 12px solid transparent;
+  border-right: 12px solid transparent;
+  border-top: 10px solid $tooltip-color;
+  top: 10px;
+  right: 50%;
+  content: ' ';
+  font-size: 0;
+  line-height: 0;
+  position: absolute;
+  width: 0;
+}
+
+%cg-tooltip-content {
+  z-index: $tooltip-zIndex;
+  height: 64px;
+  width: auto;
+  white-space: nowrap;
+  padding: 0 16px;
+  background: $tooltip-color;
+  border-radius: 2px;
+  color: white;
+  display: block;
+  font-family: $font-primary;
+  font-weight: 300;
+  line-height: 64px;
+  opacity: 0;
+  position: absolute;
+  text-align: center;
+  right: 50%;
+  max-width: none;
+  transform: translate(50%, -200%);
+}
+
+%cg-tooltip-content-transform {
+  transform: translate(50%, -160%);
+  opacity: 1;
+}
+
+.cg-tooltip {
+  @extend %cg-tooltip;
+
+  &__content {
+    @extend %cg-tooltip-content;
+    filter: drop-shadow(0 0 4px $tooltip-color);
+    transition: transform ease 0.2s, opacity 0.3s ease;
+
+    &::before {
+      @extend %cg-tooltip-content-before;
+      transform: translateX(50%);
+      top: 100%;
+    }
+  }
+
+  &__trigger {
+    &:hover {
+      + {
+        .cg-tooltip__content {
+          @extend %cg-tooltip-content-transform;
+        }
+      }
+    }
+  }
+
+  &--fixed {
+    .cg-tooltip__content {
+      @extend %cg-tooltip-content-transform;
+    }
+  }
+}
+
+[data-tooltip] {
+  @extend %cg-tooltip;
+
+  &:hover {
+    z-index: $tooltip-zIndex;
+
+    &::after {
+      @extend %cg-tooltip-content-transform;
+      display: inline-block;
+    }
+
+    &::before {
+      transform: translate(50%, calc(-100% - 20px));
+      display: inline-block;
+      opacity: 1;
+    }
+  }
+
+  &::after {
+    @extend %cg-tooltip-content-before;
+    z-index: $tooltip-zIndex;
+    display: none;
+  }
+
+  &::before {
+    @extend %cg-tooltip-content;
+    content: attr(data-tooltip);
+    display: none;
+  }
+}

@@ -583,27 +583,27 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "campgladiator.cgui/components/atoms/set-selector@0.0.3": {
+    "campgladiator.cgui/components/atoms/set-selector@0.0.4": {
         "files": [
             {
-                "name": "SetSelector.js",
                 "relativePath": "src/components/atoms/SetSelector/SetSelector.js",
-                "test": false
+                "test": false,
+                "name": "SetSelector.js"
             },
             {
-                "name": "SetSelector.scss",
                 "relativePath": "src/components/atoms/SetSelector/SetSelector.scss",
-                "test": false
+                "test": false,
+                "name": "SetSelector.scss"
             },
             {
-                "name": "SetSelector.spec.js",
                 "relativePath": "src/components/atoms/SetSelector/SetSelector.spec.js",
-                "test": true
+                "test": true,
+                "name": "SetSelector.spec.js"
             },
             {
-                "name": "index.js",
                 "relativePath": "src/components/atoms/SetSelector/index.js",
-                "test": false
+                "test": false,
+                "name": "index.js"
             }
         ],
         "mainFile": "src/components/atoms/SetSelector/index.js",
@@ -791,6 +791,34 @@
         ],
         "mainFile": "src/components/molecules/RadioGroup/index.js",
         "trackDir": "src/components/molecules/RadioGroup",
+        "origin": "AUTHORED",
+        "exported": true
+    },
+    "campgladiator.cgui/components/molecules/set-selector-group@0.0.1": {
+        "files": [
+            {
+                "relativePath": "src/components/molecules/SetSelectorGroup/SetSelectorGroup.js",
+                "test": false,
+                "name": "SetSelectorGroup.js"
+            },
+            {
+                "relativePath": "src/components/molecules/SetSelectorGroup/SetSelectorGroup.scss",
+                "test": false,
+                "name": "SetSelectorGroup.scss"
+            },
+            {
+                "relativePath": "src/components/molecules/SetSelectorGroup/SetSelectorGroup.spec.js",
+                "test": true,
+                "name": "SetSelectorGroup.spec.js"
+            },
+            {
+                "relativePath": "src/components/molecules/SetSelectorGroup/index.js",
+                "test": false,
+                "name": "index.js"
+            }
+        ],
+        "mainFile": "src/components/molecules/SetSelectorGroup/index.js",
+        "trackDir": "src/components/molecules/SetSelectorGroup",
         "origin": "AUTHORED",
         "exported": true
     },

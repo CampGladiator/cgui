@@ -1,0 +1,12 @@
+@import '../../../assets/styles/variables';
+@import '../../../assets/styles/fonts';
+
+.cg-set-selector {
+  display: flex;
+  flex-direction: row;
+  margin: 20px;
+
+  &__item {
+    margin: 0 10px;
+  }
+}

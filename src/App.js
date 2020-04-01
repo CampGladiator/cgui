@@ -18,6 +18,7 @@ import Avatar from './components/atoms/Avatar'
 import ProgressBar from './components/atoms/ProgressBar'
 import Badge from './components/atoms/Badge'
 import CreditCard from './components/atoms/CreditCard'
+import ProductImage from './components/atoms/ProductImage'
 import RadioGroup from './components/molecules/RadioGroup'
 import ButtonGroup from './components/molecules/ButtonGroup'
 import Callout from './components/atoms/Callout'
@@ -387,6 +388,9 @@ function App() {
         >
           <Callout style={{ width: '600px' }}>HYLQ6893</Callout>
         </div>
+      </Card>
+      <Card style={{ padding: '20px' }}>
+        <ProductImage src='' alt='test'/>
       </Card>
     </div>
   )

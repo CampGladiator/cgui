@@ -766,6 +766,39 @@
         "origin": "AUTHORED",
         "exported": true
     },
+    "campgladiator.cgui/components/molecules/pin-input@0.0.2": {
+        "files": [
+            {
+                "relativePath": "src/components/molecules/PinInput/PinInput.js",
+                "test": false,
+                "name": "PinInput.js"
+            },
+            {
+                "relativePath": "src/components/molecules/PinInput/PinInput.md",
+                "test": false,
+                "name": "PinInput.md"
+            },
+            {
+                "relativePath": "src/components/molecules/PinInput/PinInput.scss",
+                "test": false,
+                "name": "PinInput.scss"
+            },
+            {
+                "relativePath": "src/components/molecules/PinInput/PinInput.spec.js",
+                "test": true,
+                "name": "PinInput.spec.js"
+            },
+            {
+                "relativePath": "src/components/molecules/PinInput/index.js",
+                "test": false,
+                "name": "index.js"
+            }
+        ],
+        "mainFile": "src/components/molecules/PinInput/index.js",
+        "trackDir": "src/components/molecules/PinInput",
+        "origin": "AUTHORED",
+        "exported": true
+    },
     "campgladiator.cgui/components/molecules/radio-group@0.0.10": {
         "files": [
             {
@@ -794,7 +827,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "campgladiator.cgui/components/molecules/set-selector-group@0.0.3": {
+    "campgladiator.cgui/components/molecules/set-selector-group@0.0.5": {
         "files": [
             {
                 "relativePath": "src/components/molecules/SetSelectorGroup/SetSelectorGroup.js",

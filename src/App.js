@@ -25,6 +25,7 @@ import ButtonGroup from './components/molecules/ButtonGroup'
 import Steps from './components/molecules/Steps'
 import Atoms from './examples/atoms'
 import Molecules from './examples/molecules'
+import ProductImage from './components/atoms/ProductImage'
 
 const toggleGrowl = () =>
   document.getElementById('growlInfo') &&
@@ -341,6 +342,34 @@ function App() {
           style={{ margin: '20px' }}
         />
       </Card>
+
+      <Card style={{ padding: '20px' }}>
+        <ProductImage size="59px" type="bold" />
+        <ProductImage size="59px" type="single" />
+        <ProductImage size="59px" type="owf" />
+        <ProductImage
+          size="59px"
+          src="https://en.gravatar.com/userimage/32884912/b318719acf13489f60cba203b71e4d15.png?size=200"
+        />
+        <ProductImage size="59px" />
+        <br />
+        <ProductImage type="bold" />
+        <ProductImage type="single" />
+        <ProductImage type="owf" />
+        <ProductImage src="https://en.gravatar.com/userimage/32884912/b318719acf13489f60cba203b71e4d15.png?size=200" />
+        <ProductImage />
+        <br />
+        <ProductImage size="123px" type="bold" style={{ margin: '2px' }} />
+        <ProductImage size="123px" type="single" style={{ margin: '2px' }} />
+        <ProductImage size="123px" type="owf" style={{ margin: '2px' }} />
+        <ProductImage
+          size="123px"
+          src="https://en.gravatar.com/userimage/32884912/b318719acf13489f60cba203b71e4d15.png?size=200"
+          style={{ margin: '2px' }}
+        />
+        <ProductImage size="123px" style={{ margin: '2px' }} />
+      </Card>
+
       <Card style={{ padding: '20px', display: 'flex' }}>
         <Badge />
         <Badge bold />

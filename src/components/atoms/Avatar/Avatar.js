@@ -18,7 +18,7 @@ Avatar.defaultProps = {
   alt: 'user image',
   size: '48px',
   className: '',
-  style: '',
+  style: {},
 }
 
 Avatar.propTypes = {

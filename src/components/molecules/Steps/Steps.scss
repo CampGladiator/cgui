@@ -1,10 +1,12 @@
+@import '../../../assets/styles/fonts.scss';
 @import '../../../assets/styles/breakpoints';
 @import '../../../assets/styles/variables';
 
 .cg-steps {
   display: flex;
-  margin: auto;
+  margin: 0 auto;
   width: 75%;
+  box-sizing: border-box;
 
   @include for-tablet-portrait-down {
     width: 85%;
@@ -20,6 +22,8 @@
   align-items: center;
   opacity: 0.4;
   transition: all 0.5s ease;
+  font-family: $font-primary;
+  box-sizing: border-box;
 
   &--current {
     opacity: 1;
@@ -52,6 +56,8 @@
     letter-spacing: 0.5px;
     margin-left: 10px;
     text-transform: none;
+    font-weight: normal;
+    color: $dark-gray;
   }
 
   @include for-phone-only {
@@ -69,7 +75,7 @@
   }
 
   @include for-phone-landscape-down {
-    &:not(.step--current) &__text {
+    &:not(.cg-step--current) &__text {
       opacity: 0;
       transform: scaleX(0);
       width: 0;

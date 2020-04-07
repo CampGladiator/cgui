@@ -4,6 +4,7 @@ import Tooltip from './Tooltip'
 import FlasMessage from './FlashMessage'
 import Modal from './Modal'
 import PinInput from './PinInput'
+import Header from './Header'
 
 export default () => (
   <Fragment>
@@ -12,5 +13,6 @@ export default () => (
     <Modal />
     <SetSelectorGroupExample />
     <PinInput />
+    <Header />
   </Fragment>
 )

@@ -8,7 +8,6 @@ import './Button.scss'
 
 const Button = ({
   className,
-  id,
   primary,
   secondary,
   solid,
@@ -36,7 +35,6 @@ const Button = ({
     )}
     disabled={disabled}
     onClick={onClick}
-    id={id}
     {...props}
   >
     {icon && <Icon className="cg-button__icon" name={icon} />}
@@ -48,7 +46,6 @@ const Size = PropTypes.oneOf(['xsmall', 'small', 'large', 'xlarge'])
 
 Button.defaultProps = {
   className: '',
-  id: '',
   icon: '',
   primary: false,
   secondary: false,
@@ -63,7 +60,6 @@ Button.defaultProps = {
 
 Button.propTypes = {
   className: PropTypes.string,
-  id: PropTypes.string,
   icon: PropTypes.string,
   primary: PropTypes.bool,
   secondary: PropTypes.bool,

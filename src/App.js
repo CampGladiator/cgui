@@ -101,6 +101,7 @@ function App() {
           size="xsmall"
           style={{ margin: '10px' }}
           onClick={onButtonClick}
+          id="testButtonId"
         >
           Extra Small Outline
         </Button>

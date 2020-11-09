@@ -28,6 +28,11 @@ This architecture also allows us to properly test our components thoroughly befo
 
 ## Contributing
 
+### Important note about developer workflow
+Be aware that our development process for this repo is different from other repos. Instead of updating git and adding a PR prior to publishing/deploying your component changes to bit.dev, you'll want to instead push all of your updates to bit.dev before creating your PR or merging to github. This is because deploying to bit.dev will change files in your repo which would require you to push additional changes to github.
+
+Because your are publishing your changes before having them merged to source control it is very important that you thoroughly test and review your changes prior to deploying them to bit.dev. Ensure you add new jest tests to cover new component changes to help validate your updates as well.
+
 ### Work on existing components
 When working on an existing component in the library, first be sure to run `yarn sync` to import the latest versions of all components. This is important since components can be updated outside of this working repository.
 

@@ -16,6 +16,12 @@ describe('<Button />', () => {
     ).toBe(true)
   })
 
+  it('accepts custom id', () => {
+    expect(
+      shallow(<Button id="testingTheId" />).find('#testingTheId'),
+    ).toBeTruthy()
+  })
+
   it('renders button with modifier class', () => {
     expect(shallow(<Button solid />).hasClass('cg-button--solid')).toBe(true)
   })

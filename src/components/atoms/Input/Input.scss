@@ -57,12 +57,26 @@ $input-border: 2px solid $light-gray;
   }
 
   &--rounded {
-    border: 2px solid;
-    border-color: $light-gray;
+    border: 1px solid;
+    border-color: $medium-gray;
     border-radius: 999px;
     box-sizing: border-box;
-    height: 41px;
-    padding: 0 16px;
+    height: 40px;
+    padding: 0 20px;
+    color: $dark-gray;
+    font-size: 14px;
+    letter-spacing: -0.2px;
+    font-weight: normal;
+
+    &::placeholder {
+      color: $text-gray;
+      font-weight: normal;
+    }
+
+    &:focus {
+      border-color: $navy-lighter;
+      box-shadow: 0 0 0 3px rgba(167,204,237,.5);
+    }
   }
 
   &[disabled] {

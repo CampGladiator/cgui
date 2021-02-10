@@ -66,23 +66,23 @@ function App() {
 
   return (
     <div className="App">
-      <Card style={{ padding: '20px' }}>
+      <Card style={{ padding: '50px' }}>
         <form style={{ maxWidth: '550px', margin: 'auto' }}>
           <Fieldset>
             <FormLabel>Default Label</FormLabel>
             <Input placeholder="Default Input"></Input>
-            <Input centered placeholder="Centered Input"></Input>
-            <Input rounded placeholder="Rounded Input"></Input>
+          </Fieldset>
+          <Fieldset>
+            <FormLabel>Disabled Input</FormLabel>
+            <Input placeholder="Default Input" disabled></Input>
           </Fieldset>
           <Fieldset inline>
             <FormLabel>Inline Label</FormLabel>
             <Input placeholder="Default Input"></Input>
-            <Input separator placeholder="Separator Input"></Input>
           </Fieldset>
           <Fieldset inline>
             <Input placeholder="Default Input"></Input>
-            <Input separator placeholder="Separator Input"></Input>
-            <Input separator placeholder="Separator Input"></Input>
+            <Input separator placeholder="Default Input"></Input>
           </Fieldset>
           <Fieldset inline>
             <FormLabel>inline dropdown</FormLabel>

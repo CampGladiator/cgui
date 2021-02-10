@@ -1,29 +1,36 @@
 @import '../../../assets/styles/fonts';
 @import '../../../assets/styles/variables';
-@import '../../../assets/styles/breakpoints';
-
-$input-border: 2px solid $light-gray;
 
 .cg-input {
   font-family: $font-primary;
-  background-color: white;
-  border: 0;
-  border-bottom: $input-border;
-  border-radius: 0;
-  font-size: $size-m;
+  font-size: $size-xs;
   box-shadow: none;
-  box-sizing: content-box;
-  color: $navy;
+  box-sizing: border-box;
   display: inline-block;
   line-height: normal;
-  font-weight: 400;
-  height: 38px;
   min-width: 1px;
-  padding-bottom: 8px;
-  position: relative;
+  background-color: white;
+  border: 1px solid $medium-gray;
+  border-radius: 999px;
+  height: 40px;
+  padding: 0 20px;
+  color: $dark-gray;
+  letter-spacing: -0.2px;
+  font-weight: 300;
   transition: border-color ease 0.2s;
   outline: 0;
   width: 100%;
+  position: relative;
+
+  &::placeholder {
+    font-weight: 300;
+    color: $text-gray;
+  }
+
+  &:focus {
+    border-color: $navy-light;
+    box-shadow: 0 0 0 3px rgba($navy-lighter, 0.5);
+  }
 
   &::-webkit-inner-spin-button,
   &::-webkit-calendar-picker-indicator {
@@ -31,42 +38,14 @@ $input-border: 2px solid $light-gray;
     display: none;
   }
 
-  &::placeholder {
-    font-weight: 300;
-    color: $light-gray;
-    opacity: 1;
-  }
-
-  &:focus,
-  &:focus ~ .fieldset__addon {
-    border-color: $navy;
-  }
-
-  &--centered {
-    text-align: center;
-  }
-
-  &--separator {
-    @include breakpoint(tablet-portrait) {
-      border-left: $input-border;
-      padding-left: 16px;
-    }
-    @include breakpoint(phone-only) {
-      margin-top: 32px;
-    }
-  }
-
-  &--rounded {
-    border: 2px solid;
-    border-color: $light-gray;
-    border-radius: 999px;
-    box-sizing: border-box;
-    height: 41px;
-    padding: 0 16px;
-  }
-
   &[disabled] {
     cursor: default;
-    color: $medium-gray;
+    background-color: $lightest-gray;
+    border: 1px solid $light-gray;
+    color: $light-gray;
+
+    &::placeholder {
+      color: $light-gray;
+    }
   }
 }

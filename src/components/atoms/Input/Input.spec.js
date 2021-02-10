@@ -19,9 +19,9 @@ describe('<Input />', () => {
 
   it('should allow additional, user provided classes', () => {
     expect(
-      shallow(<Input centered rounded />)
-        .find('.cg-input--centered')
-        .hasClass('cg-input--rounded'),
+      shallow(<Input className="custom-input"/>)
+        .find('.custom-input')
+        .hasClass('custom-input'),
     ).toBe(true)
   })
 })

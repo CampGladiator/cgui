@@ -164,6 +164,10 @@ function App() {
 
       <Card style={{ padding: '20px' }}>
         <ButtonGroup
+          content={{ left: 'default left', right: 'default right' }}
+          style={{ padding: '10px 0' }}
+        />
+        <ButtonGroup
           primary
           content={{ left: 'default left', right: 'default right' }}
           defaultSelected="left"

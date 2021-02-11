@@ -10,4 +10,8 @@
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
   }
+
+  .cg-button:not(:first-child) {
+    margin-left: -2px;
+  }
 }

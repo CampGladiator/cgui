@@ -672,7 +672,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "campgladiator.cgui/components/molecules/button-group@0.0.21": {
+    "campgladiator.cgui/components/molecules/button-group@0.0.22": {
         "files": [
             {
                 "name": "ButtonGroup.js",

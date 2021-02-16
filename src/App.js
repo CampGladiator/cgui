@@ -30,17 +30,17 @@ const toggleGrowl = () =>
   document.getElementById('growlInfo') &&
   document.getElementById('growlInfo').classList.toggle('cg-growl-msg--open')
 
-const handleCheckboxClick = checked =>
+const handleCheckboxClick = (checked) =>
   console.log('handleCheckboxClick:', checked)
 
-const handleOnRadioChange = selected =>
+const handleOnRadioChange = (selected) =>
   console.log('handleOnRadioChange:', selected)
 
 const testLeftClick = () => console.log('testLeftClick:', 'left click')
 
 const testRightClick = () => console.log('testRightClick:', 'right click')
 
-const onButtonClick = e => console.log('onButtonClick:', e.target)
+const onButtonClick = (e) => console.log('onButtonClick:', e.target)
 
 const radioOptions = [
   {
@@ -61,8 +61,10 @@ function App() {
   const [switch1Status, setSwitch1Status] = useState(false)
   const [switch2Status, setSwitch2Status] = useState(false)
 
-  const handleToggleSwitch1 = componentState => setSwitch1Status(componentState)
-  const handleToggleSwitch2 = componentState => setSwitch2Status(componentState)
+  const handleToggleSwitch1 = (componentState) =>
+    setSwitch1Status(componentState)
+  const handleToggleSwitch2 = (componentState) =>
+    setSwitch2Status(componentState)
 
   return (
     <div className="App">
@@ -95,7 +97,7 @@ function App() {
         </form>
       </Card>
 
-      <Card style={{ padding: '20px' }}>
+      <Card style={{ margin: '20px' }} flat>
         <Button
           outline
           size="xsmall"
@@ -137,7 +139,7 @@ function App() {
         </Button>
       </Card>
 
-      <Card style={{ padding: '20px' }}>
+      <Card style={{ margin: '20px' }} raised>
         <Icon name="arrow-left" size={20} primary />
         <Icon name="arrow-left" size={20} secondary />
         <Icon name="arrow-left" size={20} dark />

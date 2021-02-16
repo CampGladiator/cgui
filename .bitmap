@@ -799,7 +799,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "campgladiator.cgui/components/molecules/pin-input@0.0.8": {
+    "campgladiator.cgui/components/molecules/pin-input@0.0.9": {
         "files": [
             {
                 "name": "PinInput.js",

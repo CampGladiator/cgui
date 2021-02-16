@@ -176,7 +176,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "campgladiator.cgui/components/atoms/card@0.0.2": {
+    "campgladiator.cgui/components/atoms/card@0.0.3": {
         "files": [
             {
                 "name": "Card.js",

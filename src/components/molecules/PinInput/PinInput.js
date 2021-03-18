@@ -9,6 +9,7 @@ class PinInput extends Component {
   static defaultProps = {
     noOfInput: 4,
     value: '',
+    inputRef: null,
   }
 
   static propTypes = {
@@ -24,6 +25,10 @@ class PinInput extends Component {
      * @property {function} onPinChanged Handler used to get the Callback when input is filled
      */
     onPinChanged: PropTypes.func,
+    /**
+     * @property {Object} inputRef Used to select the pin input
+     */
+    inputRef: PropTypes.object,
   }
 
   constructor(props) {
@@ -63,7 +68,7 @@ class PinInput extends Component {
   getFullPinValues() {
     const { pinValue } = this.state
     let fullPinValues = ''
-    Object.keys(pinValue).map(item => {
+    Object.keys(pinValue).map((item) => {
       fullPinValues += pinValue[item]
       return item
     })
@@ -108,7 +113,7 @@ class PinInput extends Component {
 
   viewInputData(e) {
     e.preventDefault()
-    this.setState(state => ({ hideInputValue: !state.hideInputValue }))
+    this.setState((state) => ({ hideInputValue: !state.hideInputValue }))
   }
 
   getPinInputPart() {
@@ -120,9 +125,9 @@ class PinInput extends Component {
       return pinValueKeys.map((item, index) => {
         const value = pinValue[item] || ''
         const name = `pin${index + 1}`
-        const inputPartRefCallback = ele =>
+        const inputPartRefCallback = (ele) =>
           this.setInputPartRefCallback(ele, index)
-        const onInputChangeHandler = event =>
+        const onInputChangeHandler = (event) =>
           this.onInputChangeHandler(event, index)
         return (
           <div
@@ -153,13 +158,14 @@ class PinInput extends Component {
   }
 
   render() {
-    const { id, style, className } = this.props
+    const { id, style, className, inputRef } = this.props
     const { hideInputValue } = this.state
     return (
       <div
         id={id}
         style={style}
         className={mods('cg-pin-input', {}, className)}
+        ref={inputRef}
       >
         {this.getPinInputPart()}
         <Button

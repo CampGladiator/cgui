@@ -16,6 +16,7 @@
     width: 40px;
     outline: 0;
     font-size: 14px;
+    color: $dark-gray;
 
     &:focus {
       border-color: $navy-light;
@@ -66,7 +67,7 @@
     &::after {
       content: '•';
       font-weight: 600;
-      color: #233746;
+      color: $dark-gray;
       font-size: 18px;
       position: absolute;
       top: 50%;
@@ -76,8 +77,10 @@
     }
 
     .cg-pin-input__char {
-      color: white;
+      color: transparent;
       caret-color: black;
+      font-size: 0;
+      user-select: none;
     }
   }
 }

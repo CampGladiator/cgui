@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import mods from '../../../utilities/mods'
-import Icon from '../../atoms/Icon'
 import Button from '../../atoms/Button'
 import './PinInput.scss'
-
+import keyCodes from '../../../utilities/keycodes'
+import { CDN_URL } from '../../../utilities/path'
 class PinInput extends Component {
   static defaultProps = {
     noOfInput: 4,
@@ -34,64 +34,45 @@ class PinInput extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      pinValue: {
-        ...this.convertNoOfInputToStateObj(),
-      },
+      pinValue: this.convertNoOfInputToStateObj(),
       hideInputValue: true,
     }
-    this.pinInputRef = null
-    this.setInputPartRefCallback = this.setInputPartRefCallback.bind(this)
-    this.onInputChangeHandler = this.onInputChangeHandler.bind(this)
-    this.viewInputData = this.viewInputData.bind(this)
+    this.pinInputRef = []
+  }
+
+  setRef = (ref) => {
+    this.pinInputRef.push(ref)
   }
 
   convertNoOfInputToStateObj() {
     const { noOfInput, value } = this.props
     const updatedValue = value || ''
-    return Array.from(Array(noOfInput), (_, index) => index + 1).reduce(
-      (stateObj, item, indexValue) => {
-        return {
-          ...stateObj,
-          [`pin${item}`]: updatedValue.charAt(indexValue) || '',
-        }
-      },
-      {},
-    )
-  }
-
-  setInputPartRefCallback(ele, index) {
-    if (ele) {
-      this.pinInputRef[index] = ele
+    const stateObj = {}
+    for (let i = 0; i < noOfInput; i++) {
+      stateObj[`pin${i + 1}`] = updatedValue[i] || ''
     }
+    return stateObj
   }
 
   getFullPinValues() {
     const { pinValue } = this.state
-    let fullPinValues = ''
-    Object.keys(pinValue).map((item) => {
-      fullPinValues += pinValue[item]
-      return item
-    })
-    return fullPinValues
+    return Object.values(pinValue).join('')
   }
 
   handleChange(e) {
     const { id, value } = e.target
     const { pinValue } = this.state
-    this.setState(
-      { pinValue: { ...pinValue, [id]: value.substr(0, 1) } },
-      () => {
-        const { onPinChanged, noOfInput } = this.props
-        if (onPinChanged) {
-          const fullPinValues = this.getFullPinValues()
-          const userPin =
-            fullPinValues.length === noOfInput ? fullPinValues : ''
-          onPinChanged({
-            userPin,
-          })
-        }
-      },
-    )
+    pinValue[id] = value.substr(0, 1)
+    this.setState({ pinValue }, () => {
+      const { onPinChanged, noOfInput } = this.props
+      if (onPinChanged) {
+        const fullPinValues = this.getFullPinValues()
+        const userPin = fullPinValues.length === noOfInput ? fullPinValues : ''
+        onPinChanged({
+          userPin,
+        })
+      }
+    })
   }
 
   focusOnPinPart(indexPos) {
@@ -101,7 +82,7 @@ class PinInput extends Component {
     }
   }
 
-  onInputChangeHandler(e, index) {
+  onInputChangeHandler(index, e) {
     const { value } = e.target
     const step = value ? 1 : -1
     const isValid = value === '' || !isNaN(parseInt(value, 10))
@@ -111,9 +92,18 @@ class PinInput extends Component {
     }
   }
 
-  viewInputData(e) {
+  viewInputData = (e) => {
     e.preventDefault()
     this.setState((state) => ({ hideInputValue: !state.hideInputValue }))
+  }
+
+  onInputKeyDown = (index, e) => {
+    if (e.key === keyCodes.BACKSPACE) {
+      this.focusOnPinPart(index - 1)
+      e.target.value = ''
+      this.handleChange(e)
+      e.preventDefault()
+    }
   }
 
   getPinInputPart() {
@@ -121,34 +111,30 @@ class PinInput extends Component {
     const pinValueKeys = Object.keys(pinValue) || []
     const numberOfPins = pinValueKeys.length || 0
     if (numberOfPins > 1) {
-      this.pinInputRef = new Array(numberOfPins)
-      return pinValueKeys.map((item, index) => {
-        const value = pinValue[item] || ''
+      return pinValueKeys.map((key, index) => {
+        const value = pinValue[key] || ''
         const name = `pin${index + 1}`
-        const inputPartRefCallback = (ele) =>
-          this.setInputPartRefCallback(ele, index)
-        const onInputChangeHandler = (event) =>
-          this.onInputChangeHandler(event, index)
         return (
           <div
-            key={`cg-pin-input-part~${index}`}
+            key={`cg-pin-input-part~${name}`}
             className={mods('cg-pin-input-part', {
               filled: (value && hideInputValue) || false,
             })}
           >
             <input
-              ref={inputPartRefCallback}
+              ref={this.setRef}
               className="cg-pin-input__char"
               placeholder="-"
               type="tel"
               id={name}
               autoComplete="off"
               value={value}
-              pattern="[0-9]*"
+              pattern="^[0–9]$"
               required
               name={name}
               inputMode="numeric"
-              onChange={onInputChangeHandler}
+              onKeyDown={this.onInputKeyDown.bind(this, index)}
+              onChange={this.onInputChangeHandler.bind(this, index)}
             />
           </div>
         )
@@ -175,7 +161,11 @@ class PinInput extends Component {
           type="button"
           onClick={this.viewInputData}
         >
-          <Icon name="view" />
+          <img
+            src={`${CDN_URL}eye.svg`}
+            alt=""
+            className="cg-pin-input__toggle-visibility-icon"
+          />
         </Button>
       </div>
     )

@@ -5,6 +5,7 @@ import Button from '../../atoms/Button'
 import './PinInput.scss'
 import keyCodes from '../../../utilities/keycodes'
 import { CDN_URL } from '../../../utilities/path'
+
 class PinInput extends Component {
   static defaultProps = {
     noOfInput: 4,
@@ -40,11 +41,9 @@ class PinInput extends Component {
     this.pinInputRef = []
   }
 
-  setRef = (ref) => {
-    this.pinInputRef.push(ref)
-  }
+  setRef = (ref) => this.pinInputRef.push(ref)
 
-  convertNoOfInputToStateObj() {
+  convertNoOfInputToStateObj = () => {
     const { noOfInput, value } = this.props
     const updatedValue = value || ''
     const stateObj = {}
@@ -54,12 +53,9 @@ class PinInput extends Component {
     return stateObj
   }
 
-  getFullPinValues() {
-    const { pinValue } = this.state
-    return Object.values(pinValue).join('')
-  }
+  getFullPinValues = () => Object.values(this.state.pinValue).join('')
 
-  handleChange(e) {
+  handleChange = (e) => {
     const { id, value } = e.target
     const { pinValue } = this.state
     pinValue[id] = value.substr(0, 1)
@@ -75,18 +71,18 @@ class PinInput extends Component {
     })
   }
 
-  focusOnPinPart(indexPos) {
+  focusOnPinPart = (indexPos) => {
     const element = this.pinInputRef[indexPos] || null
     if (element) {
       element.focus()
     }
   }
 
-  onInputChangeHandler(index, e) {
+  onInputChangeHandler = (index, e) => {
     const { value } = e.target
-    const step = value ? 1 : -1
     const isValid = value === '' || !isNaN(parseInt(value, 10))
     if (isValid) {
+      const step = value ? 1 : -1
       this.handleChange(e)
       this.focusOnPinPart(index + step)
     }
@@ -106,7 +102,7 @@ class PinInput extends Component {
     }
   }
 
-  getPinInputPart() {
+  getPinInputPart = () => {
     const { pinValue, hideInputValue } = this.state
     const pinValueKeys = Object.keys(pinValue) || []
     const numberOfPins = pinValueKeys.length || 0
@@ -133,8 +129,8 @@ class PinInput extends Component {
               required
               name={name}
               inputMode="numeric"
-              onKeyDown={this.onInputKeyDown.bind(this, index)}
-              onChange={this.onInputChangeHandler.bind(this, index)}
+              onKeyDown={(e) => this.onInputKeyDown(index, e)}
+              onChange={(e) => this.onInputChangeHandler(index, e)}
             />
           </div>
         )

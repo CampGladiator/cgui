@@ -799,7 +799,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "campgladiator.cgui/components/molecules/pin-input@0.0.10": {
+    "campgladiator.cgui/components/molecules/pin-input@0.0.11": {
         "files": [
             {
                 "name": "PinInput.js",
@@ -825,10 +825,19 @@
                 "name": "index.js",
                 "relativePath": "src/components/molecules/PinInput/index.js",
                 "test": false
+            },
+            {
+                "relativePath": "src/utilities/keycodes.js",
+                "test": false,
+                "name": "keycodes.js"
+            },
+            {
+                "relativePath": "src/utilities/path.js",
+                "test": false,
+                "name": "path.js"
             }
         ],
         "mainFile": "src/components/molecules/PinInput/index.js",
-        "trackDir": "src/components/molecules/PinInput",
         "origin": "AUTHORED",
         "exported": true
     },

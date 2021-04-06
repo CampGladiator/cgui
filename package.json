@@ -64,6 +64,7 @@
     }
   },
   "resolutions": {
-    "react-scripts/terser-webpack-plugin/serialize-javascript": "^3.1.0"
+    "react-scripts/terser-webpack-plugin/serialize-javascript": "^3.1.0",
+    "react-scripts/webpack-dev-server/yargs/yargs-parser": "^13.1.2"
   }
 }

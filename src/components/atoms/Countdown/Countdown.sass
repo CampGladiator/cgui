@@ -1,0 +1,27 @@
+@import '../../../assets/styles/variables';
+
+.countdown
+  padding-bottom: 5px
+  margin: 0
+  font-family: $font-primary
+  font-size: $size-s
+
+  &__separator
+    position: relative
+    padding: 0 6px
+
+  &__item
+    position: relative
+    text-align: center
+
+    &-time
+      font-size: $size-m
+      font-weight: $weight-normal
+
+    &-label
+      position: absolute
+      bottom: -18px
+      left: 50%
+      transform: translateX(-50%)
+      font-size: $size-xs
+      font-weight: $weight-book

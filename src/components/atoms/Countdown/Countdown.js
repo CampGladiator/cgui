@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 
-import './Countdown.sass'
+import './Countdown.scss'
 
 const diff = (a, b) => {
   const distance = a - b

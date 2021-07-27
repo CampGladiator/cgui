@@ -1004,5 +1004,33 @@
         "origin": "AUTHORED",
         "exported": true
     },
+    "countdown": {
+        "files": [
+            {
+                "relativePath": "src/components/atoms/Countdown/Countdown.js",
+                "test": false,
+                "name": "Countdown.js"
+            },
+            {
+                "relativePath": "src/components/atoms/Countdown/Countdown.scss",
+                "test": false,
+                "name": "Countdown.scss"
+            },
+            {
+                "relativePath": "src/components/atoms/Countdown/Countdown.spec.js",
+                "test": false,
+                "name": "Countdown.spec.js"
+            },
+            {
+                "relativePath": "src/components/atoms/Countdown/index.js",
+                "test": false,
+                "name": "index.js"
+            }
+        ],
+        "mainFile": "src/components/atoms/Countdown/index.js",
+        "trackDir": "src/components/atoms/Countdown",
+        "origin": "AUTHORED",
+        "exported": false
+    },
     "version": "14.8.8"
 }

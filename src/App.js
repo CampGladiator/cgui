@@ -99,7 +99,12 @@ function App() {
       </Card>
 
       <Card style={{ margin: '20px' }} flat>
-        <Countdown endTime={2019621601000} />
+        <Countdown
+          endTime={2019621601000}
+          data-test="test"
+          className="test test2"
+          title="test"
+        />
       </Card>
 
       <Card style={{ margin: '20px' }} flat>

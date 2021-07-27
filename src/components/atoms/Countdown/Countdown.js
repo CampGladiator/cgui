@@ -13,7 +13,11 @@ const diff = (a, b) => {
   ]
 }
 
-const Countdown = ({ endTime = new Date().toISOString() }) => {
+const Countdown = ({
+  endTime = new Date().toISOString(),
+  className = '',
+  ...props
+}) => {
   const [now, setDate] = useState(+new Date())
   const [day, hour, min, sec] = diff(+new Date(endTime), now)
 
@@ -23,7 +27,7 @@ const Countdown = ({ endTime = new Date().toISOString() }) => {
   }, [])
 
   return (
-    <figure className="countdown">
+    <figure className={`${className} countdown`} {...props}>
       {Object.entries({
         ...(day > 0 ? { day } : {}),
         hour,

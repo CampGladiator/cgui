@@ -968,7 +968,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "campgladiator.cgui/countdown@0.0.1": {
+    "campgladiator.cgui/countdown@0.0.3": {
         "files": [
             {
                 "relativePath": "src/components/atoms/Countdown/Countdown.js",

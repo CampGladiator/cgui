@@ -1,16 +1,15 @@
 import React, { useEffect, useState } from 'react'
-
 import './Countdown.scss'
 
 const diff = (a, b) => {
   const distance = a - b
 
-  return [
-    Math.floor(distance / (1000 * 60 * 60 * 24)),
-    Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
-    Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)),
-    Math.floor((distance % (1000 * 60)) / 1000),
-  ]
+  return {
+    day: Math.floor(distance / (1000 * 60 * 60 * 24)),
+    hour: Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
+    min: Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)),
+    sec: Math.floor((distance % (1000 * 60)) / 1000),
+  }
 }
 
 const Countdown = ({
@@ -19,21 +18,16 @@ const Countdown = ({
   ...props
 }) => {
   const [now, setDate] = useState(+new Date())
-  const [day, hour, min, sec] = diff(+new Date(endTime), now)
+  const difference = diff(+new Date(endTime), now)
 
   useEffect(() => {
-    const interval = setInterval(() => setDate(() => +new Date()), 1000)
+    const interval = setInterval(() => setDate(+new Date()), 1000)
     return () => clearInterval(interval)
   }, [])
 
   return (
     <figure className={`${className} countdown`} {...props}>
-      {Object.entries({
-        ...(day > 0 ? { day } : {}),
-        hour,
-        min,
-        sec,
-      }).reduce(
+      {Object.entries(difference).reduce(
         (acc, [key, comp]) => (
           <>
             {acc}

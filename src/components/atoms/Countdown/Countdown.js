@@ -13,15 +13,15 @@ const diff = (a, b) => {
 }
 
 const Countdown = ({
-  endTime = new Date().toISOString(),
+  endTime = Date.now().toISOString(),
   className = '',
   ...props
 }) => {
-  const [now, setDate] = useState(+new Date())
+  const [now, setDate] = useState(Date.now())
   const difference = diff(+new Date(endTime), now)
 
   useEffect(() => {
-    const interval = setInterval(() => setDate(+new Date()), 1000)
+    const interval = setInterval(() => setDate(Date.now()), 1000)
     return () => clearInterval(interval)
   }, [])
 

@@ -37,11 +37,10 @@ const handleCheckboxClick = (checked) =>
 const handleOnRadioChange = (selected) =>
   console.log('handleOnRadioChange:', selected)
 
-const testLeftClick = () => console.log('testLeftClick:', 'left click')
-
-const testRightClick = () => console.log('testRightClick:', 'right click')
-
 const onButtonClick = (e) => console.log('onButtonClick:', e.target)
+
+const onButtonGroupSelection = (event, index) =>
+  console.log('onButtonGroupSelection:', [ event.target, index ])
 
 const radioOptions = [
   {
@@ -176,24 +175,87 @@ function App() {
 
       <Card style={{ padding: '20px' }}>
         <ButtonGroup
-          content={{ left: 'default left', right: 'default right' }}
           style={{ padding: '10px 0' }}
+          onSelect={onButtonGroupSelection}
+          buttons={
+            [
+              { icon: 'check', children: (<span>With Icon</span>) },
+              { icon: 'check', children: (<span>With Icon 2</span>) },
+              { icon: 'check', children: (<span>With Icon 3</span>) },
+            ]
+          }
         />
         <ButtonGroup
-          primary
-          content={{ left: 'default left', right: 'default right' }}
-          defaultSelected="left"
-          handleOnLeftClick={testLeftClick}
           style={{ padding: '10px 0' }}
+          color="secondary"
+          onSelect={onButtonGroupSelection}
+          buttons={
+            [
+              { children: (<span>Secondary</span>) },
+              { children: (<span>Secondary 2</span>) },
+              { children: (<span>Secondary 3</span>) },
+            ]
+          }
         />
         <ButtonGroup
-          secondary
-          size="large"
-          content={{ left: 'large left', right: 'large right' }}
-          defaultSelected="right"
-          handleOnLeftClick={testLeftClick}
-          handleOnRightClick={testRightClick}
           style={{ padding: '10px 0' }}
+          color="gray"
+          onSelect={onButtonGroupSelection}
+          buttons={
+            [
+              { children: (<span>Gray</span>) },
+              { children: (<span>Gray 2</span>) },
+              { children: (<span>Gray 3</span>) },
+            ]
+          }
+        />
+        <ButtonGroup
+          style={{ padding: '10px 0' }}
+          color="dark"
+          onSelect={onButtonGroupSelection}
+          buttons={
+            [
+              { children: (<span>Dark</span>) },
+              { children: (<span>Dark 2</span>) },
+              { children: (<span>Dark 3</span>) },
+            ]
+          }
+        />
+        <ButtonGroup
+          style={{ backgroundColor: 'gray', padding: '10px 0' }}
+          color="white"
+          onSelect={onButtonGroupSelection}
+          buttons={
+            [
+              { children: (<span>White</span>) },
+              { children: (<span>White 2</span>) },
+              { children: (<span>White 3</span>) },
+            ]
+          }
+        />
+        <ButtonGroup
+          style={{ padding: '10px 0' }}
+          disabled
+          onSelect={onButtonGroupSelection}
+          buttons={
+            [
+              { children: (<span>Disabled</span>) },
+              { children: (<span>Disabled 2</span>) },
+              { children: (<span>Disabled 3</span>) },
+            ]
+          }
+        />
+        <ButtonGroup
+          style={{ padding: '10px 0' }}
+          size="xlarge"
+          onSelect={onButtonGroupSelection}
+          buttons={
+            [
+              { children: (<span>XLarge</span>) },
+              { children: (<span>XLarge 2</span>) },
+              { children: (<span>XLarge 3</span>) },
+            ]
+          }
         />
       </Card>
 

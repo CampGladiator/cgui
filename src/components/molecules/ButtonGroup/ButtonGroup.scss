@@ -1,17 +1,16 @@
 .cg-button-group {
   display: flex;
 
-  &__left {
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
-  }
+  &__button {
+    &:not(:last-child) {
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    }
 
-  &__right {
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
-  }
-
-  .cg-button:not(:first-child) {
-    margin-left: -2px;
+    &:not(:first-child) {
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+      margin-left: -2px;
+    }
   }
 }

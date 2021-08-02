@@ -3,91 +3,80 @@ import PropTypes from 'prop-types'
 import Button from '../../atoms/Button'
 import './ButtonGroup.scss'
 
-const btnIDs = ['left', 'right']
+function colorToButtonProp(color) {
+  switch (color) {
+    case 'primary':
+      return { primary: true }
 
-const ButtonGroup = ({
-  primary,
-  secondary,
-  solid,
-  outline,
-  dark,
-  gray,
+    case 'secondary':
+      return { secondary: true }
+
+    case 'dark':
+      return { dark: true }
+
+    case 'gray':
+      return { gray: true }
+
+    case 'white':
+      return { white: true }
+  }
+
+  return {}
+}
+
+function ButtonGroup({
+  className = '',
+  color = 'default',
   size,
   disabled,
-  content = { left: '', right: '' },
-  className = '',
-  defaultSelected = '',
-  handleOnLeftClick = () => {},
-  handleOnRightClick = () => {},
+  defaultSelected = 0,
+  onSelect = () => {},
+  buttons = [],
   ...props
-}) => {
-  const [activeBtn, setActiveBtn] = useState('')
-
-  const getDefaultSelectedId = defaultSelected =>
-    defaultSelected === btnIDs[0] || defaultSelected === btnIDs[1]
-      ? defaultSelected
-      : null
-
-  const isActiveBtn = (element, defaultSelected) =>
-    (getDefaultSelectedId(defaultSelected) === element && activeBtn === '') ||
-    activeBtn === element
-
-  const setClickHandler = id =>
-    id === btnIDs[0] ? handleOnLeftClick() : handleOnRightClick()
-
-  const handleOnClick = (element, id) => {
-    setActiveBtn(element.target.dataset.id)
-    return setClickHandler(id)
+}) {
+  const buttonsProps = buttons.map((props) => ({
+    ...props,
+    ...colorToButtonProp(color),
+    size,
+    disabled,
+  }))
+  const [active, setActive] = useState(defaultSelected)
+  const isSelected = (index) => index === active
+  const onClick = (index) => (event) => {
+    setActive(index)
+    onSelect(event, index)
   }
 
   return (
     <div className={`cg-button-group ${className}`} {...props}>
-      {btnIDs.map(id => (
-        <Button
-          className={`cg-button-group__${id}`}
-          key={id}
-          data-id={id}
-          size={size}
-          disabled={disabled}
-          primary={primary}
-          secondary={secondary}
-          solid={isActiveBtn(id, defaultSelected)}
-          outline={!isActiveBtn(id, defaultSelected)}
-          dark={dark}
-          gray={gray}
-          onClick={element => {
-            handleOnClick(element, id)
-          }}
-        >
-          {content[id]}
-        </Button>
-      ))}
+      {buttonsProps.map((buttonProps, index) => {
+        const isActive = isSelected(index)
+
+        return (
+          <Button
+            {...buttonProps}
+            className="cg-button-group__button"
+            key={`button-group-button-${index}`}
+            solid={isActive}
+            outline={!isActive}
+            onClick={onClick(index)}
+          />
+        )
+      })}
     </div>
   )
 }
 
 const Size = PropTypes.oneOf(['xsmall', 'small', 'large', 'xlarge'])
-const Selected = PropTypes.oneOf(btnIDs)
-
-const Labels = PropTypes.shape({
-  left: PropTypes.string.isRequired,
-  right: PropTypes.string.isRequired,
-})
 
 ButtonGroup.propTypes = {
-  primary: PropTypes.bool,
-  secondary: PropTypes.bool,
-  solid: PropTypes.bool,
-  outline: PropTypes.bool,
-  dark: PropTypes.bool,
-  gray: PropTypes.bool,
+  color: PropTypes.string,
   size: Size,
   disabled: PropTypes.bool,
-  content: Labels,
   className: PropTypes.string,
-  defaultSelected: Selected,
-  handleOnLeftClick: PropTypes.func,
-  handleOnRightClick: PropTypes.func,
+  defaultSelected: PropTypes.number,
+  onSelect: PropTypes.func,
+  buttons: PropTypes.arrayOf(PropTypes.shape(Button.propTypes)),
 }
 
 export default ButtonGroup

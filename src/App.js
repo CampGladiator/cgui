@@ -23,6 +23,7 @@ import Callout from './components/atoms/Callout'
 import RadioGroup from './components/molecules/RadioGroup'
 import ButtonGroup from './components/molecules/ButtonGroup'
 import Steps from './components/molecules/Steps'
+import Countdown from './components/atoms/Countdown'
 import Atoms from './examples/atoms'
 import Molecules from './examples/molecules'
 
@@ -95,6 +96,15 @@ function App() {
             <Dropdown options={[{ label: 'test', value: 'test' }]} />
           </Fieldset>
         </form>
+      </Card>
+
+      <Card style={{ margin: '20px' }} flat>
+        <Countdown
+          endTime={2019621601000}
+          data-test="test"
+          className="test test2"
+          title="test"
+        />
       </Card>
 
       <Card style={{ margin: '20px' }} flat>
